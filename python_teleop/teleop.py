@@ -6,7 +6,7 @@ from std_msgs.msg import Int8
 
 from curtsies import Input
 
-FILEPATH = p = os.path.dirname(os.path.abspath(__file__)) + '/latest_key.txt'
+FILEPATH = os.path.dirname(os.path.abspath(__file__)) + '/latest_key.txt'
 
 def keys():
     pub = rospy.Publisher('elfin/reactive_controller/key',String,queue_size=10) # "key" is the publisher name
