@@ -1,0 +1,16 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:38:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KKDL::Twist[m[K’ and ‘[01m[Kconst Eigen::Product<Eigen::Matrix<double, 6, -1>, Eigen::Matrix<double, -1, 1>, 0>[m[K’)
+  352 |             Vd_ = Jd_.data * qd_dot_.[01;31m[Kdata[m[K; // calc Vd_
+      |                                      [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/include/kdl/segment.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Twist& KDL::Twist::operator=(const KDL::Twist&)[m[K’
+  720 | class [01;36m[KTwist[m[K {
+      |       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Eigen::Product<Eigen::Matrix<double, 6, -1>, Eigen::Matrix<double, -1, 1>, 0>[m[K’ to ‘[01m[Kconst KDL::Twist&[m[K’
+[01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Twist& KDL::Twist::operator=(KDL::Twist&&)[m[K’
+[01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Eigen::Product<Eigen::Matrix<double, 6, -1>, Eigen::Matrix<double, -1, 1>, 0>[m[K’ to ‘[01m[KKDL::Twist&&[m[K’
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,14 @@
+[  0%] Built target std_msgs_generate_messages_py
+[  5%] Built target arm_controllers_gencfg
+[  5%] Built target std_msgs_generate_messages_nodejs
+[  5%] Built target std_msgs_generate_messages_cpp
+[  5%] Built target _arm_controllers_generate_messages_check_deps_ControllerJointState
+[  5%] Built target std_msgs_generate_messages_eus
+[  5%] Built target std_msgs_generate_messages_lisp
+[ 58%] Built target arm_controllers
+[ 70%] Built target arm_controllers_generate_messages_py
+[ 76%] Built target arm_controllers_generate_messages_nodejs
+[ 82%] Built target arm_controllers_generate_messages_cpp
+[ 94%] Built target arm_controllers_generate_messages_eus
+[100%] Built target arm_controllers_generate_messages_lisp
+[100%] Built target arm_controllers_generate_messages

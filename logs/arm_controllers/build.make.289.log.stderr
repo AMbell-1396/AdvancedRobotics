@@ -1,0 +1,28 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::reactive_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:212:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot_old_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  212 |         [01;31m[Kqd_dot_old_[m[K.data = Eigen::VectorXd::Zero(n:joints_);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+      |         [32m[Kqd_dot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:212:51:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+  212 |         qd_dot_old_.data = Eigen::VectorXd::Zero(n[01;31m[K:[m[Kjoints_);
+      |                                                   [01;31m[K^[m[K
+      |                                                   [32m[K::[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:212:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ is not a class, namespace, or enumeration
+  212 |         qd_dot_old_.data = Eigen::VectorXd::Zero([01;31m[Kn[m[K:joints_);
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::reactive_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:311:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot_old_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  311 |                 qd_dot_.data = [01;31m[Kqd_dot_old_[m[K.data;
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+      |                                [32m[Kqd_dot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:510:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kkd_dot_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  510 |             qd_dot_.data = J_inv_ * ([01;31m[Kkd_dot_[m[K + K_universal_ * ex_):
+      |                                      [01;31m[K^~~~~~~[m[K
+      |                                      [32m[Kqd_dot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:512:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot_old_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  512 |             [01;31m[Kqd_dot_old_[m[K.data = qd_dot_.data;     // unused
+      |             [01;31m[K^~~~~~~~~~~[m[K
+      |             [32m[Kqd_dot_[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

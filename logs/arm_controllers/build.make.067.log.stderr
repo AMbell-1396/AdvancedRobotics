@@ -1,0 +1,42 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:303:9:[m[K [01;31m[Kerror: [m[K‘[01m[KVd_jnt_[m[K’ was not declared in this scope
+  303 |         [01;31m[KVd_jnt_[m[K.data = Jd_.data  * qd_dot_.data; // Desired Twist joint
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:308:16:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[KKDL::JntArray[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’})
+  308 |             Vd_[01;31m[K[[m[Ki] = Vd_jnt_.data[i];
+      |                [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:315:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_dot_cmd_[m[K’ was not declared in this scope
+  315 |         [01;31m[Kq_dot_cmd_[m[K.data = qd_dot_.data + Kp_.data.cwiseProduct(e_.data);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:335:13:[m[K [01;31m[Kerror: [m[K‘[01m[KXerr_[m[K’ was not declared in this scope
+  335 |             [01;31m[KXerr_[m[K = diff(x_,xd_,1);
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:340:13:[m[K [01;31m[Kerror: [m[K‘[01m[KXerr_[m[K’ was not declared in this scope
+  340 |             [01;31m[KXerr_[m[K.rot = diff(x_.M, xd_.M);
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:345:13:[m[K [01;31m[Kerror: [m[K‘[01m[KVcmd_[m[K’ was not declared in this scope; did you mean ‘[01m[KVd_[m[K’?
+  345 |             [01;31m[KVcmd_[m[K = Vd_ + 1.0*Xerr_;  // replace gain = 1.0 with a matrix?
+      |             [01;31m[K^~~~~[m[K
+      |             [32m[KVd_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:345:31:[m[K [01;31m[Kerror: [m[K‘[01m[KXerr_[m[K’ was not declared in this scope
+  345 |             Vcmd_ = Vd_ + 1.0*[01;31m[KXerr_[m[K;  // replace gain = 1.0 with a matrix?
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:349:13:[m[K [01;31m[Kerror: [m[K‘[01m[KVcmd_jnt_[m[K’ was not declared in this scope
+  349 |             [01;31m[KVcmd_jnt_[m[K.data[i] = Vcmd_[i];
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:354:24:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[KEigen::PlainObjectBase<Derived>::Scalar* Eigen::PlainObjectBase<Derived>::data() [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::PlainObjectBase<Derived>::Scalar = double][m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  354 |                 [01;31m[KJ_inv_.data[m[K = J_.data.inverse();
+      |                 [01;31m[K~~~~~~~^~~~[m[K
+      |                            [32m[K()[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:357:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_dot_cmd_[m[K’ was not declared in this scope
+  357 |             [01;31m[Kq_dot_cmd_[m[K.data = J_inv_.data * Vcmd_jnt_.data;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:357:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVcmd_jnt_[m[K’ was not declared in this scope
+  357 |             q_dot_cmd_.data = J_inv_.data * [01;31m[KVcmd_jnt_[m[K.data;
+      |                                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:377:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_dot_cmd_[m[K’ was not declared in this scope
+  377 |             id_solver_->JntToCoriolis(q_, [01;31m[Kq_dot_cmd_[m[K, C_);
+      |                                           [01;31m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

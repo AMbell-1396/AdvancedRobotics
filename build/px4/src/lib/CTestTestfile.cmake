@@ -1,0 +1,37 @@
+# CMake generated Testfile for 
+# Source directory: /home/advrob/elfin_ws/src/Firmware/src/lib
+# Build directory: /home/advrob/elfin_ws/build/px4/src/lib
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("airspeed")
+subdirs("airspeed_validator")
+subdirs("avoidance")
+subdirs("battery")
+subdirs("bezier")
+subdirs("cdev")
+subdirs("circuit_breaker")
+subdirs("collision_prevention")
+subdirs("controllib")
+subdirs("conversion")
+subdirs("drivers")
+subdirs("ecl")
+subdirs("flight_tasks")
+subdirs("hysteresis")
+subdirs("l1")
+subdirs("landing_slope")
+subdirs("led")
+subdirs("mag_compensation")
+subdirs("mathlib")
+subdirs("mixer")
+subdirs("mixer_module")
+subdirs("output_limit")
+subdirs("perf")
+subdirs("pid")
+subdirs("rc")
+subdirs("systemlib")
+subdirs("tecs")
+subdirs("terrain_estimation")
+subdirs("tunes")
+subdirs("version")
+subdirs("weather_vane")

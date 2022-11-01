@@ -1,0 +1,1 @@
+/home/advrob/elfin_ws/devel/.private/gazebo_fiducial_generator/share/gazebo_fiducial_generator/cmake/gazebo_fiducial_generatorConfig.cmake

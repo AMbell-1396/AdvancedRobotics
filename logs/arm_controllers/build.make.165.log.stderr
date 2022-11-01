@@ -1,0 +1,10 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::reactive_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:240:94:[m[K [01;31m[Kerror: [m[K‘[01m[KkeyCmd[m[K’ is not a member of ‘[01m[Karm_controllers::reactive_controller[m[K’
+  240 |         sub_key_ = n.subscribe<std_msgs::String>("key", 1, boost::bind(&reactive_controller::[01;31m[KkeyCmd[m[K, this, _1)); //topic, queue, callback, ??
+      |                                                                                              [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:242:9:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  242 |         [01;31m[K{[m[K
+      |         [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

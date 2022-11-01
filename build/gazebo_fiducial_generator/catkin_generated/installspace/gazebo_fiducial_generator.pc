@@ -1,0 +1,8 @@
+prefix=/home/advrob/elfin_ws/install
+
+Name: gazebo_fiducial_generator
+Description: Description of gazebo_fiducial_generator
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

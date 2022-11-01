@@ -1,0 +1,558 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:345:13:[m[K [01;31m[Kerror: [m[K‘[01m[KVd_jnt_[m[K’ was not declared in this scope
+  345 |             [01;31m[KVd_jnt_[m[K.data = Jd_.data * qd_dot.data;  // des twist joint
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:345:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  345 |             Vd_jnt_.data = Jd_.data * [01;31m[Kqd_dot[m[K.data;  // des twist joint
+      |                                       [01;31m[K^~~~~~[m[K
+      |                                       [32m[Kqd_dot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:350:20:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[KKDL::JntArray[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’})
+  350 |                 Vd_[01;31m[K[[m[Ki] = Vd_jnt_.data[i];
+      |                    [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:23:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[KKDL::Jacobian[m[K’ and ‘[01m[KKDL::JntArray[m[K’)
+  352 |             Vd_ = [32m[KJd_[m[K [01;31m[K*[m[K [34m[Kqd_dot_[m[K; // calc Vd_
+      |                   [32m[K~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~[m[K
+      |                   [32m[K|[m[K     [34m[K|[m[K
+      |                   [32m[K|[m[K     [34m[KKDL::JntArray[m[K
+      |                   [32m[KKDL::Jacobian[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:487[m[K,
+                 from [01m[K/usr/include/kdl/jacobian.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/jntarray.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver_recursive_newton_euler.hpp:25[m[K,
+                 from [01m[K/usr/include/kdl/chaindynparam.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:15[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:543:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MatrixDerived, class PermutationDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::PermutationBase<PermutationDerived>&)[m[K’
+  543 | [01;36m[Koperator[m[K*(const MatrixBase<MatrixDerived> &matrix,
+      | [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:543:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:487[m[K,
+                 from [01m[K/usr/include/kdl/jacobian.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/jntarray.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver_recursive_newton_euler.hpp:25[m[K,
+                 from [01m[K/usr/include/kdl/chaindynparam.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:15[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:555:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PermutationDerived, class MatrixDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::PermutationBase<PermutationDerived>&, const Eigen::MatrixBase<U>&)[m[K’
+  555 | [01;36m[Koperator[m[K*(const PermutationBase<PermutationDerived> &permutation,
+      | [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:555:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:488[m[K,
+                 from [01m[K/usr/include/kdl/jacobian.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/jntarray.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver_recursive_newton_euler.hpp:25[m[K,
+                 from [01m[K/usr/include/kdl/chaindynparam.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:15[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:338:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MatrixDerived, class TranspositionsDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::TranspositionsBase<TranspositionsDerived>&)[m[K’
+  338 | [01;36m[Koperator[m[K*(const MatrixBase<MatrixDerived> &matrix,
+      | [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:338:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:488[m[K,
+                 from [01m[K/usr/include/kdl/jacobian.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/jntarray.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainidsolver_recursive_newton_euler.hpp:25[m[K,
+                 from [01m[K/usr/include/kdl/chaindynparam.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:15[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:350:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class TranspositionsDerived, class MatrixDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::TranspositionsBase<TranspositionsDerived>&, const Eigen::MatrixBase<U>&)[m[K’
+  350 | [01;36m[Koperator[m[K*(const TranspositionsBase<TranspositionsDerived> &transpositions,
+      | [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:350:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst Eigen::TranspositionsBase<TranspositionsDerived>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Householder:24[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/QR:17[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/SVD:11[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/include/utils/pseudo_inversion.h:10[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:24[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:438:99:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived, class VectorsType, class CoeffsType, int Side> typename Eigen::internal::matrix_type_times_scalar_type<typename VectorsType::Scalar, OtherDerived>::Type Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::HouseholderSequence<VectorsType, CoeffsType, Side>&)[m[K’
+  438 | typename internal::matrix_type_times_scalar_type<typename VectorsType::Scalar,OtherDerived>::Type [01;36m[Koperator[m[K*(const MatrixBase<OtherDerived>& other, const HouseholderSequence<VectorsType,CoeffsType,Side>& h)
+      |                                                                                                   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:438:99:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/frames.hpp:1261[m[K,
+                 from [01m[K/usr/include/kdl/segment.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/frames.inl:83:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Vector KDL::operator*(const KDL::Vector&, double)[m[K’
+   83 | Vector [01;36m[Koperator[m[K *(const Vector& lhs,double rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:83:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Vector&[m[K’
+   83 | Vector operator *([01;36m[Kconst Vector& lhs[m[K,double rhs)
+      |                   [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:92:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Vector KDL::operator*(double, const KDL::Vector&)[m[K’
+   92 | Vector [01;36m[Koperator[m[K *(double lhs,const Vector& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:92:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+   92 | Vector operator *([01;36m[Kdouble lhs[m[K,const Vector& rhs)
+      |                   [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:110:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Vector KDL::operator*(const KDL::Vector&, const KDL::Vector&)[m[K’
+  110 | Vector [01;36m[Koperator[m[K *(const Vector & lhs,const Vector& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:110:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Vector&[m[K’
+  110 | Vector operator *([01;36m[Kconst Vector & lhs[m[K,const Vector& rhs)
+      |                   [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:242:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Wrench KDL::operator*(const KDL::Wrench&, double)[m[K’
+  242 | Wrench [01;36m[Koperator[m[K*(const Wrench& lhs,double rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:242:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Wrench&[m[K’
+  242 | Wrench operator*([01;36m[Kconst Wrench& lhs[m[K,double rhs)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:247:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Wrench KDL::operator*(double, const KDL::Wrench&)[m[K’
+  247 | Wrench [01;36m[Koperator[m[K*(double lhs,const Wrench& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:247:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+  247 | Wrench operator*([01;36m[Kdouble lhs[m[K,const Wrench& rhs)
+      |                  [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:345:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Twist KDL::operator*(const KDL::Twist&, double)[m[K’
+  345 | Twist [01;36m[Koperator[m[K*(const Twist& lhs,double rhs)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:345:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Twist&[m[K’
+  345 | Twist operator*([01;36m[Kconst Twist& lhs[m[K,double rhs)
+      |                 [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:350:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Twist KDL::operator*(double, const KDL::Twist&)[m[K’
+  350 | Twist [01;36m[Koperator[m[K*(double lhs,const Twist& rhs)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:350:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+  350 | Twist operator*([01;36m[Kdouble lhs[m[K,const Twist& rhs)
+      |                 [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:379:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Twist KDL::operator*(const KDL::Twist&, const KDL::Twist&)[m[K’
+  379 | Twist [01;36m[Koperator[m[K*(const Twist& lhs,const Twist& rhs)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:379:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Twist&[m[K’
+  379 | Twist operator*([01;36m[Kconst Twist& lhs[m[K,const Twist& rhs)
+      |                 [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:383:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Wrench KDL::operator*(const KDL::Twist&, const KDL::Wrench&)[m[K’
+  383 | Wrench [01;36m[Koperator[m[K*(const Twist& lhs,const Wrench& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:383:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Twist&[m[K’
+  383 | Wrench operator*([01;36m[Kconst Twist& lhs[m[K,const Wrench& rhs)
+      |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:406:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Frame KDL::operator*(const KDL::Frame&, const KDL::Frame&)[m[K’
+  406 |  Frame [01;36m[Koperator[m[K *(const Frame& lhs,const Frame& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:406:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Frame&[m[K’
+  406 |  Frame operator *([01;36m[Kconst Frame& lhs[m[K,const Frame& rhs)
+      |                   [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:750:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Vector2 KDL::operator*(const KDL::Vector2&, double)[m[K’
+  750 | IMETHOD Vector2 [01;36m[Koperator[m[K *(const Vector2& lhs,double rhs)
+      |                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:750:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Vector2&[m[K’
+  750 | IMETHOD Vector2 operator *([01;36m[Kconst Vector2& lhs[m[K,double rhs)
+      |                            [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:755:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Vector2 KDL::operator*(double, const KDL::Vector2&)[m[K’
+  755 | IMETHOD Vector2 [01;36m[Koperator[m[K *(double lhs,const Vector2& rhs)
+      |                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:755:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+  755 | IMETHOD Vector2 operator *([01;36m[Kdouble lhs[m[K,const Vector2& rhs)
+      |                            [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:863:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Rotation2 KDL::operator*(const KDL::Rotation2&, const KDL::Rotation2&)[m[K’
+  863 | IMETHOD Rotation2 [01;36m[Koperator[m[K *(const Rotation2& lhs,const Rotation2& rhs) {
+      |                   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:863:47:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation2&[m[K’
+  863 | IMETHOD Rotation2 operator *([01;36m[Kconst Rotation2& lhs[m[K,const Rotation2& rhs) {
+      |                              [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frames.inl:923:16:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Frame2 KDL::operator*(const KDL::Frame2&, const KDL::Frame2&)[m[K’
+  923 | IMETHOD Frame2 [01;36m[Koperator[m[K *(const Frame2& lhs,const Frame2& rhs)
+      |                [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frames.inl:923:41:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Frame2&[m[K’
+  923 | IMETHOD Frame2 operator *([01;36m[Kconst Frame2& lhs[m[K,const Frame2& rhs)
+      |                           [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/kdl/rigidbodyinertia.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rotationalinertia.hpp:68:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationalInertia KDL::operator*(double, const KDL::RotationalInertia&)[m[K’
+   68 |     RotationalInertia [01;36m[Koperator[m[K*(double a, const RotationalInertia& I);
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/rotationalinertia.hpp:43:51:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+   43 |         friend RotationalInertia operator*([01;36m[Kdouble a[m[K, const RotationalInertia& I);
+      |                                            [01;36m[K~~~~~~~^[m[K
+In file included from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rigidbodyinertia.hpp:103:22:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RigidBodyInertia KDL::operator*(double, const KDL::RigidBodyInertia&)[m[K’
+  103 |     RigidBodyInertia [01;36m[Koperator[m[K*(double a,const RigidBodyInertia& I);
+      |                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/rigidbodyinertia.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rotationalinertia.hpp:55:50:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+   55 |         friend RigidBodyInertia operator*([01;36m[Kdouble a[m[K,const RigidBodyInertia& I);
+      |                                           [01;36m[K~~~~~~~^[m[K
+In file included from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rigidbodyinertia.hpp:115:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Wrench KDL::operator*(const KDL::RigidBodyInertia&, const KDL::Twist&)[m[K’
+  115 |     Wrench [01;36m[Koperator[m[K*(const RigidBodyInertia& I,const Twist& t);
+      |            [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/rigidbodyinertia.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rotationalinertia.hpp:59:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::RigidBodyInertia&[m[K’
+   59 |         friend Wrench operator*([01;36m[Kconst RigidBodyInertia& I[m[K,const Twist& t);
+      |                                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rigidbodyinertia.hpp:120:22:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RigidBodyInertia KDL::operator*(const KDL::Frame&, const KDL::RigidBodyInertia&)[m[K’
+  120 |     RigidBodyInertia [01;36m[Koperator[m[K*(const Frame& T,const RigidBodyInertia& I);
+      |                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/rigidbodyinertia.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rotationalinertia.hpp:61:56:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Frame&[m[K’
+   61 |         friend RigidBodyInertia operator*([01;36m[Kconst Frame& T[m[K,const RigidBodyInertia& I);
+      |                                           [01;36m[K~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rigidbodyinertia.hpp:125:22:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RigidBodyInertia KDL::operator*(const KDL::Rotation&, const KDL::RigidBodyInertia&)[m[K’
+  125 |     RigidBodyInertia [01;36m[Koperator[m[K*(const Rotation& R,const RigidBodyInertia& I);
+      |                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/rigidbodyinertia.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/segment.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/tree.hpp:27[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:11[m[K:
+[01m[K/usr/include/kdl/rotationalinertia.hpp:63:59:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation&[m[K’
+   63 |         friend RigidBodyInertia operator*([01;36m[Kconst Rotation& R[m[K,const RigidBodyInertia& I);
+      |                                           [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/kdl/chaindynparam.hpp:26[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:15[m[K:
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:97:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::ArticulatedBodyInertia KDL::operator*(double, const KDL::ArticulatedBodyInertia&)[m[K’
+   97 |     ArticulatedBodyInertia [01;36m[Koperator[m[K*(double a,const ArticulatedBodyInertia& I);
+      |                            [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:72:56:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+   72 |         friend ArticulatedBodyInertia operator*([01;36m[Kdouble a[m[K,const ArticulatedBodyInertia& I);
+      |                                                 [01;36m[K~~~~~~~^[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:112:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::Wrench KDL::operator*(const KDL::ArticulatedBodyInertia&, const KDL::Twist&)[m[K’
+  112 |     Wrench [01;36m[Koperator[m[K*(const ArticulatedBodyInertia& I,const Twist& t);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:77:63:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::ArticulatedBodyInertia&[m[K’
+   77 |         friend Wrench operator*([01;36m[Kconst ArticulatedBodyInertia& I[m[K,const Twist& t);
+      |                                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:117:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::ArticulatedBodyInertia KDL::operator*(const KDL::Frame&, const KDL::ArticulatedBodyInertia&)[m[K’
+  117 |     ArticulatedBodyInertia [01;36m[Koperator[m[K*(const Frame& T,const ArticulatedBodyInertia& I);
+      |                            [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:78:62:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Frame&[m[K’
+   78 |         friend ArticulatedBodyInertia operator*([01;36m[Kconst Frame& T[m[K,const ArticulatedBodyInertia& I);
+      |                                                 [01;36m[K~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:122:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::ArticulatedBodyInertia KDL::operator*(const KDL::Rotation&, const KDL::ArticulatedBodyInertia&)[m[K’
+  122 |     ArticulatedBodyInertia [01;36m[Koperator[m[K*(const Rotation& R,const ArticulatedBodyInertia& I);
+      |                            [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/articulatedbodyinertia.hpp:79:65:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation&[m[K’
+   79 |         friend ArticulatedBodyInertia operator*([01;36m[Kconst Rotation& R[m[K,const ArticulatedBodyInertia& I);
+      |                                                 [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/kdl/framevel.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/utilities/rall1d.h:223:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator*(const KDL::Rall1d<T, V, S>&, const KDL::Rall1d<T, V, S>&)[m[K’
+  223 | INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K *(const Rall1d<T,V,S>& lhs,const Rall1d<T,V,S>& rhs)
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/utilities/rall1d.h:223:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst KDL::Rall1d<T, V, S>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/framevel.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/utilities/rall1d.h:248:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator*(S, const KDL::Rall1d<T, V, S>&)[m[K’
+  248 | INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K *(S s,const Rall1d<T,V,S>& v)
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/utilities/rall1d.h:248:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::JntArray[m[K’ is not derived from ‘[01m[Kconst KDL::Rall1d<T, V, S>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/framevel.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/utilities/rall1d.h:254:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator*(const KDL::Rall1d<T, V, S>&, S)[m[K’
+  254 | INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K *(const Rall1d<T,V,S>& v,S s)
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/utilities/rall1d.h:254:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst KDL::Rall1d<T, V, S>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/framevel.hpp:387[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/framevel.inl:33:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::FrameVel KDL::operator*(const KDL::FrameVel&, const KDL::FrameVel&)[m[K’
+   33 | FrameVel [01;36m[Koperator[m[K *(const FrameVel& lhs,const FrameVel& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:33:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::FrameVel&[m[K’
+   33 | FrameVel operator *([01;36m[Kconst FrameVel& lhs[m[K,const FrameVel& rhs)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:37:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::FrameVel KDL::operator*(const KDL::FrameVel&, const KDL::Frame&)[m[K’
+   37 | FrameVel [01;36m[Koperator[m[K *(const FrameVel& lhs,const Frame& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:37:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::FrameVel&[m[K’
+   37 | FrameVel operator *([01;36m[Kconst FrameVel& lhs[m[K,const Frame& rhs)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:41:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::FrameVel KDL::operator*(const KDL::Frame&, const KDL::FrameVel&)[m[K’
+   41 | FrameVel [01;36m[Koperator[m[K *(const Frame& lhs,const FrameVel& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:41:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Frame&[m[K’
+   41 | FrameVel operator *([01;36m[Kconst Frame& lhs[m[K,const FrameVel& rhs)
+      |                     [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:94:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationVel KDL::operator*(const KDL::RotationVel&, const KDL::RotationVel&)[m[K’
+   94 | RotationVel [01;36m[Koperator[m[K* (const RotationVel& r1,const RotationVel& r2) {
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:94:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::RotationVel&[m[K’
+   94 | RotationVel operator* ([01;36m[Kconst RotationVel& r1[m[K,const RotationVel& r2) {
+      |                        [01;36m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:98:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationVel KDL::operator*(const KDL::Rotation&, const KDL::RotationVel&)[m[K’
+   98 | RotationVel [01;36m[Koperator[m[K* (const Rotation& r1,const RotationVel& r2) {
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:98:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation&[m[K’
+   98 | RotationVel operator* ([01;36m[Kconst Rotation& r1[m[K,const RotationVel& r2) {
+      |                        [01;36m[K~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:102:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationVel KDL::operator*(const KDL::RotationVel&, const KDL::Rotation&)[m[K’
+  102 | RotationVel [01;36m[Koperator[m[K* (const RotationVel& r1,const Rotation& r2) {
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:102:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::RotationVel&[m[K’
+  102 | RotationVel operator* ([01;36m[Kconst RotationVel& r1[m[K,const Rotation& r2) {
+      |                        [01;36m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:245:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const KDL::VectorVel&, const KDL::VectorVel&)[m[K’
+  245 | VectorVel [01;36m[Koperator[m[K * (const VectorVel& r1,const VectorVel& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:245:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorVel&[m[K’
+  245 | VectorVel operator * ([01;36m[Kconst VectorVel& r1[m[K,const VectorVel& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:249:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const KDL::VectorVel&, const KDL::Vector&)[m[K’
+  249 | VectorVel [01;36m[Koperator[m[K * (const VectorVel& r1,const Vector& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:249:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorVel&[m[K’
+  249 | VectorVel operator * ([01;36m[Kconst VectorVel& r1[m[K,const Vector& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:253:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const KDL::Vector&, const KDL::VectorVel&)[m[K’
+  253 | VectorVel [01;36m[Koperator[m[K * (const Vector& r1,const VectorVel& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:253:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Vector&[m[K’
+  253 | VectorVel operator * ([01;36m[Kconst Vector& r1[m[K,const VectorVel& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:260:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(double, const KDL::VectorVel&)[m[K’
+  260 | VectorVel [01;36m[Koperator[m[K * (double r1,const VectorVel& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:260:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+  260 | VectorVel operator * ([01;36m[Kdouble r1[m[K,const VectorVel& r2) {
+      |                       [01;36m[K~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:264:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const KDL::VectorVel&, double)[m[K’
+  264 | VectorVel [01;36m[Koperator[m[K * (const VectorVel& r1,double r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:264:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorVel&[m[K’
+  264 | VectorVel operator * ([01;36m[Kconst VectorVel& r1[m[K,double r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:270:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const doubleVel&, const KDL::VectorVel&)[m[K’
+  270 | VectorVel [01;36m[Koperator[m[K * (const doubleVel& r1,const VectorVel& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:270:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst doubleVel&[m[K’ {aka ‘[01m[Kconst KDL::Rall1d<double>&[m[K’}
+  270 | VectorVel operator * ([01;36m[Kconst doubleVel& r1[m[K,const VectorVel& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:274:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const KDL::VectorVel&, const doubleVel&)[m[K’
+  274 | VectorVel [01;36m[Koperator[m[K * (const VectorVel& r2,const doubleVel& r1) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:274:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorVel&[m[K’
+  274 | VectorVel operator * ([01;36m[Kconst VectorVel& r2[m[K,const doubleVel& r1) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/framevel.inl:286:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorVel KDL::operator*(const KDL::Rotation&, const KDL::VectorVel&)[m[K’
+  286 | VectorVel [01;36m[Koperator[m[K*(const Rotation& R,const VectorVel& x) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:286:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation&[m[K’
+  286 | VectorVel operator*([01;36m[Kconst Rotation& R[m[K,const VectorVel& x) {
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/kdl/framevel.inl:415:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistVel KDL::operator*(const KDL::TwistVel&, double)[m[K’
+  415 | TwistVel [01;36m[Koperator[m[K*(const TwistVel& lhs,double rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:415:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::TwistVel&[m[K’
+  415 | TwistVel operator*([01;36m[Kconst TwistVel& lhs[m[K,double rhs)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:420:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistVel KDL::operator*(double, const KDL::TwistVel&)[m[K’
+  420 | TwistVel [01;36m[Koperator[m[K*(double lhs,const TwistVel& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:420:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+  420 | TwistVel operator*([01;36m[Kdouble lhs[m[K,const TwistVel& rhs)
+      |                    [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:431:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistVel KDL::operator*(const KDL::TwistVel&, const doubleVel&)[m[K’
+  431 | TwistVel [01;36m[Koperator[m[K*(const TwistVel& lhs,const doubleVel& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:431:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::TwistVel&[m[K’
+  431 | TwistVel operator*([01;36m[Kconst TwistVel& lhs[m[K,const doubleVel& rhs)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:436:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistVel KDL::operator*(const doubleVel&, const KDL::TwistVel&)[m[K’
+  436 | TwistVel [01;36m[Koperator[m[K*(const doubleVel& lhs,const TwistVel& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/framevel.inl:436:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst doubleVel&[m[K’ {aka ‘[01m[Kconst KDL::Rall1d<double>&[m[K’}
+  436 | TwistVel operator*([01;36m[Kconst doubleVel& lhs[m[K,const TwistVel& rhs)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/kdl/frameacc.hpp:33[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/utilities/rall2d.h:236:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator*(const KDL::Rall2d<T, V, S>&, const KDL::Rall2d<T, V, S>&)[m[K’
+  236 | INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K *(const Rall2d<T,V,S>& lhs,const Rall2d<T,V,S>& rhs)
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/utilities/rall2d.h:236:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst KDL::Rall2d<T, V, S>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/frameacc.hpp:33[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/utilities/rall2d.h:264:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator*(S, const KDL::Rall2d<T, V, S>&)[m[K’
+  264 | INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K *(S s,const Rall2d<T,V,S>& v)
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/utilities/rall2d.h:264:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::JntArray[m[K’ is not derived from ‘[01m[Kconst KDL::Rall2d<T, V, S>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/frameacc.hpp:33[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/utilities/rall2d.h:270:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator*(const KDL::Rall2d<T, V, S>&, S)[m[K’
+  270 | INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K *(const Rall2d<T,V,S>& v,S s)
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/utilities/rall2d.h:270:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:352:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KKDL::Jacobian[m[K’ is not derived from ‘[01m[Kconst KDL::Rall2d<T, V, S>[m[K’
+  352 |             Vd_ = Jd_ * [01;36m[Kqd_dot_[m[K; // calc Vd_
+      |                         [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/kdl/frameacc.hpp:267[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/frameacc.inl:52:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const KDL::VectorAcc&, const KDL::VectorAcc&)[m[K’
+   52 | VectorAcc [01;36m[Koperator[m[K * (const VectorAcc& r1,const VectorAcc& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:52:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorAcc&[m[K’
+   52 | VectorAcc operator * ([01;36m[Kconst VectorAcc& r1[m[K,const VectorAcc& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:59:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const KDL::VectorAcc&, const KDL::Vector&)[m[K’
+   59 | VectorAcc [01;36m[Koperator[m[K * (const VectorAcc& r1,const Vector& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:59:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorAcc&[m[K’
+   59 | VectorAcc operator * ([01;36m[Kconst VectorAcc& r1[m[K,const Vector& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:63:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const KDL::Vector&, const KDL::VectorAcc&)[m[K’
+   63 | VectorAcc [01;36m[Koperator[m[K * (const Vector& r1,const VectorAcc& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:63:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Vector&[m[K’
+   63 | VectorAcc operator * ([01;36m[Kconst Vector& r1[m[K,const VectorAcc& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:70:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(double, const KDL::VectorAcc&)[m[K’
+   70 | VectorAcc [01;36m[Koperator[m[K * (double r1,const VectorAcc& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:70:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+   70 | VectorAcc operator * ([01;36m[Kdouble r1[m[K,const VectorAcc& r2) {
+      |                       [01;36m[K~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:74:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const KDL::VectorAcc&, double)[m[K’
+   74 | VectorAcc [01;36m[Koperator[m[K * (const VectorAcc& r1,double r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:74:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorAcc&[m[K’
+   74 | VectorAcc operator * ([01;36m[Kconst VectorAcc& r1[m[K,double r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:78:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const doubleAcc&, const KDL::VectorAcc&)[m[K’
+   78 | VectorAcc [01;36m[Koperator[m[K * (const doubleAcc& r1,const VectorAcc& r2) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:78:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst doubleAcc&[m[K’ {aka ‘[01m[Kconst KDL::Rall2d<double, double, double>&[m[K’}
+   78 | VectorAcc operator * ([01;36m[Kconst doubleAcc& r1[m[K,const VectorAcc& r2) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:85:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const KDL::VectorAcc&, const doubleAcc&)[m[K’
+   85 | VectorAcc [01;36m[Koperator[m[K * (const VectorAcc& r2,const doubleAcc& r1) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:85:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::VectorAcc&[m[K’
+   85 | VectorAcc operator * ([01;36m[Kconst VectorAcc& r2[m[K,const doubleAcc& r1) {
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:192:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationAcc KDL::operator*(const KDL::RotationAcc&, const KDL::RotationAcc&)[m[K’
+  192 | RotationAcc [01;36m[Koperator[m[K* (const RotationAcc& r1,const RotationAcc& r2) {
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:192:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::RotationAcc&[m[K’
+  192 | RotationAcc operator* ([01;36m[Kconst RotationAcc& r1[m[K,const RotationAcc& r2) {
+      |                        [01;36m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:199:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationAcc KDL::operator*(const KDL::Rotation&, const KDL::RotationAcc&)[m[K’
+  199 | RotationAcc [01;36m[Koperator[m[K* (const Rotation& r1,const RotationAcc& r2) {
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:199:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation&[m[K’
+  199 | RotationAcc operator* ([01;36m[Kconst Rotation& r1[m[K,const RotationAcc& r2) {
+      |                        [01;36m[K~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:203:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::RotationAcc KDL::operator*(const KDL::RotationAcc&, const KDL::Rotation&)[m[K’
+  203 | RotationAcc [01;36m[Koperator[m[K* (const RotationAcc& r1,const Rotation& r2) {
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:203:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::RotationAcc&[m[K’
+  203 | RotationAcc operator* ([01;36m[Kconst RotationAcc& r1[m[K,const Rotation& r2) {
+      |                        [01;36m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:254:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::VectorAcc KDL::operator*(const KDL::Rotation&, const KDL::VectorAcc&)[m[K’
+  254 | VectorAcc [01;36m[Koperator[m[K*(const Rotation& R,const VectorAcc& x) {
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:254:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Rotation&[m[K’
+  254 | VectorAcc operator*([01;36m[Kconst Rotation& R[m[K,const VectorAcc& x) {
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/kdl/frameacc.inl:349:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::FrameAcc KDL::operator*(const KDL::FrameAcc&, const KDL::FrameAcc&)[m[K’
+  349 | FrameAcc [01;36m[Koperator[m[K *(const FrameAcc& lhs,const FrameAcc& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:349:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::FrameAcc&[m[K’
+  349 | FrameAcc operator *([01;36m[Kconst FrameAcc& lhs[m[K,const FrameAcc& rhs)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:353:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::FrameAcc KDL::operator*(const KDL::FrameAcc&, const KDL::Frame&)[m[K’
+  353 | FrameAcc [01;36m[Koperator[m[K *(const FrameAcc& lhs,const Frame& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:353:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::FrameAcc&[m[K’
+  353 | FrameAcc operator *([01;36m[Kconst FrameAcc& lhs[m[K,const Frame& rhs)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:357:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::FrameAcc KDL::operator*(const KDL::Frame&, const KDL::FrameAcc&)[m[K’
+  357 | FrameAcc [01;36m[Koperator[m[K *(const Frame& lhs,const FrameAcc& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:357:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::Frame&[m[K’
+  357 | FrameAcc operator *([01;36m[Kconst Frame& lhs[m[K,const FrameAcc& rhs)
+      |                     [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:471:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistAcc KDL::operator*(const KDL::TwistAcc&, double)[m[K’
+  471 | TwistAcc [01;36m[Koperator[m[K*(const TwistAcc& lhs,double rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:471:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::TwistAcc&[m[K’
+  471 | TwistAcc operator*([01;36m[Kconst TwistAcc& lhs[m[K,double rhs)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:476:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistAcc KDL::operator*(double, const KDL::TwistAcc&)[m[K’
+  476 | TwistAcc [01;36m[Koperator[m[K*(double lhs,const TwistAcc& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:476:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kdouble[m[K’
+  476 | TwistAcc operator*([01;36m[Kdouble lhs[m[K,const TwistAcc& rhs)
+      |                    [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:487:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistAcc KDL::operator*(const KDL::TwistAcc&, const doubleAcc&)[m[K’
+  487 | TwistAcc [01;36m[Koperator[m[K*(const TwistAcc& lhs,const doubleAcc& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:487:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst KDL::TwistAcc&[m[K’
+  487 | TwistAcc operator*([01;36m[Kconst TwistAcc& lhs[m[K,const doubleAcc& rhs)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:492:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KKDL::TwistAcc KDL::operator*(const doubleAcc&, const KDL::TwistAcc&)[m[K’
+  492 | TwistAcc [01;36m[Koperator[m[K*(const doubleAcc& lhs,const TwistAcc& rhs)
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/kdl/frameacc.inl:492:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::Jacobian[m[K’ to ‘[01m[Kconst doubleAcc&[m[K’ {aka ‘[01m[Kconst KDL::Rall2d<double, double, double>&[m[K’}
+  492 | TwistAcc operator*([01;36m[Kconst doubleAcc& lhs[m[K,const TwistAcc& rhs)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:382:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_ddot[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_ddot_[m[K’?
+  382 |         aux_d_.data = M_.data * ([01;31m[Kqd_ddot[m[K.data + Kd_.data.cwiseProduct(e_dot_.data)); // Kp_=0
+      |                                  [01;31m[K^~~~~~~[m[K
+      |                                  [32m[Kqd_ddot_[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

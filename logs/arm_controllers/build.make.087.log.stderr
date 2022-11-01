@@ -1,0 +1,7 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:309:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Eigen::Matrix<double, 6, -1>[m[K’ has no member named ‘[01m[Kpseudoinverse[m[K’
+  309 |         J_inv_ = J_.data.[01;31m[Kpseudoinverse[m[K();
+      |                          [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

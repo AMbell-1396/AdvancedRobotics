@@ -1,0 +1,1 @@
+/home/advrob/elfin_ws/devel/.private/elfin_description/share/elfin_description/cmake/elfin_descriptionConfig.cmake

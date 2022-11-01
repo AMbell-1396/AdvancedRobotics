@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/advrob/elfin_ws/devel/.private/px4/lib/libFlightTaskAutoFollowMe.a  CMakeFiles/FlightTaskAutoFollowMe.dir/FlightTaskAutoFollowMe.cpp.o
+/usr/bin/ranlib /home/advrob/elfin_ws/devel/.private/px4/lib/libFlightTaskAutoFollowMe.a

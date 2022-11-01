@@ -1,0 +1,39 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::velocity_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:234:66:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[KKDL::ChainFkSolverVel[m[K’
+  234 |         fk_vel_solver_.reset(new KDL::ChainFkSolverVel(kdl_chain_[01;31m[K)[m[K);
+      |                                                                  [01;31m[K^[m[K
+In file included from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/chainfksolver.hpp:74:11:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[KKDL::ChainFkSolverVel[m[K’:
+   74 |     class [01;36m[KChainFkSolverVel[m[K : public KDL::SolverI {
+      |           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/kdl/chainfksolver.hpp:97:22:[m[K [01;36m[Knote: [m[K	‘[01m[Kvirtual void KDL::ChainFkSolverVel::updateInternalDataStructures()[m[K’
+   97 |         virtual void [01;36m[KupdateInternalDataStructures[m[K()=0;
+      |                      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/kdl/chainfksolver.hpp:85:21:[m[K [01;36m[Knote: [m[K	‘[01m[Kvirtual int KDL::ChainFkSolverVel::JntToCart(const KDL::JntArrayVel&, KDL::FrameVel&, int)[m[K’
+   85 |         virtual int [01;36m[KJntToCart[m[K(const JntArrayVel& q_in, FrameVel& out,int segmentNr=-1)=0;
+      |                     [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/kdl/chainfksolver.hpp:95:21:[m[K [01;36m[Knote: [m[K	‘[01m[Kvirtual int KDL::ChainFkSolverVel::JntToCart(const KDL::JntArrayVel&, std::vector<KDL::FrameVel>&, int)[m[K’
+   95 |         virtual int [01;36m[KJntToCart[m[K(const JntArrayVel& q_in, std::vector<KDL::FrameVel>& out,int segmentNr=-1)=0;
+      |                     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:322:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKDL::ChainFkSolverVel::JntToCart(KDL::JntArray&, KDL::Frame&)[m[K’
+  322 |         fk_vel_solver_->JntToCart(q_, x_[01;31m[K)[m[K;
+      |                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:17[m[K:
+[01m[K/usr/include/kdl/chainfksolver.hpp:85:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int KDL::ChainFkSolverVel::JntToCart(const KDL::JntArrayVel&, KDL::FrameVel&, int)[m[K’
+   85 |         virtual int [01;36m[KJntToCart[m[K(const JntArrayVel& q_in, FrameVel& out,int segmentNr=-1)=0;
+      |                     [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/kdl/chainfksolver.hpp:85:50:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::JntArray[m[K’ to ‘[01m[Kconst KDL::JntArrayVel&[m[K’
+   85 |         virtual int JntToCart([01;36m[Kconst JntArrayVel& q_in[m[K, FrameVel& out,int segmentNr=-1)=0;
+      |                               [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/include/kdl/chainfksolver.hpp:95:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int KDL::ChainFkSolverVel::JntToCart(const KDL::JntArrayVel&, std::vector<KDL::FrameVel>&, int)[m[K’
+   95 |         virtual int [01;36m[KJntToCart[m[K(const JntArrayVel& q_in, std::vector<KDL::FrameVel>& out,int segmentNr=-1)=0;
+      |                     [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/kdl/chainfksolver.hpp:95:50:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KKDL::JntArray[m[K’ to ‘[01m[Kconst KDL::JntArrayVel&[m[K’
+   95 |         virtual int JntToCart([01;36m[Kconst JntArrayVel& q_in[m[K, std::vector<KDL::FrameVel>& out,int segmentNr=-1)=0;
+      |                               [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

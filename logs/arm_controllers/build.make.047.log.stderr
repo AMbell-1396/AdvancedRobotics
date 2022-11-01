@@ -1,0 +1,88 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:524:28:[m[K [01;31m[Kerror: [m[K‘[01m[KChainJntToJacSolver[m[K’ is not a member of ‘[01m[KKDL[m[K’
+  524 |     boost::scoped_ptr<KDL::[01;31m[KChainJntToJacSolver[m[K> jnt_to_jac_solver_;     // Solver to compute the jacobian
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:524:28:[m[K [01;31m[Kerror: [m[K‘[01m[KChainJntToJacSolver[m[K’ is not a member of ‘[01m[KKDL[m[K’
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:524:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  524 |     boost::scoped_ptr<KDL::ChainJntToJacSolver[01;31m[K>[m[K jnt_to_jac_solver_;     // Solver to compute the jacobian
+      |                                               [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::velocity_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:33:20:[m[K [01;31m[Kerror: [m[Kassignment of read-only member ‘[01m[Karm_controllers::velocity_controller::jointspace[m[K’
+   33 |         [01;31m[Kjointspace = true[m[K;
+      |         [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:216:78:[m[K [01;31m[Kerror: [m[K‘[01m[KComputed_Torque_CLIK_Controller[m[K’ has not been declared
+  216 |         sub_x_cmd_ = n.subscribe<std_msgs::Float64MultiArray>("command", 1, &[01;31m[KComputed_Torque_CLIK_Controller[m[K::commandCB, this);
+      |                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::velocity_controller::commandCB(const Float64MultiArrayConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:225:33:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_taskspace[m[K’ was not declared in this scope
+  225 |         if (msg->data.size() != [01;31m[Knum_taskspace[m[K)
+      |                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:231:29:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_taskspace[m[K’ was not declared in this scope
+  231 |         for (int i = 0; i < [01;31m[Knum_taskspace[m[K; i++)
+      |                             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:233:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_cmd_[m[K’ was not declared in this scope
+  233 |             [01;31m[Kx_cmd_[m[K(i) = msg->data[i];
+      |             [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:272:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_cmd_[m[K’ was not declared in this scope
+  272 |             xd_.p(0) = [01;31m[Kx_cmd_[m[K(0);
+      |                        [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:292:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  292 |         jnt_to_jac_solver_[01;31m[K->[m[KJntToJac(q_, J_);
+      |                           [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:301:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kxd_dot_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  301 |         qd_.data = qd_old_.data + J_inv_ * ([01;31m[Kxd_dot_[m[K + K_tracking_ * ex_) * dt;
+      |                                             [01;31m[K^~~~~~~[m[K
+      |                                             [32m[Kqd_dot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:301:55:[m[K [01;31m[Kerror: [m[K‘[01m[KK_tracking_[m[K’ was not declared in this scope
+  301 |         qd_.data = qd_old_.data + J_inv_ * (xd_dot_ + [01;31m[KK_tracking_[m[K * ex_) * dt;
+      |                                                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:301:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_[m[K’ was not declared in this scope; did you mean ‘[01m[Ke_[m[K’?
+  301 |         qd_.data = qd_old_.data + J_inv_ * (xd_dot_ + K_tracking_ * [01;31m[Kex_[m[K) * dt;
+      |                                                                     [01;31m[K^~~[m[K
+      |                                                                     [32m[Ke_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:317:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_dot_[m[K’ was not declared in this scope; did you mean ‘[01m[Ke_dot_[m[K’?
+  317 |             [01;31m[Kex_dot_[m[K = xd_dot_ - xdot_;
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Ke_dot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:317:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kxdot_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqdot_[m[K’?
+  317 |             ex_dot_ = xd_dot_ - [01;31m[Kxdot_[m[K;
+      |                                 [01;31m[K^~~~~[m[K
+      |                                 [32m[Kqdot_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:319:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kfk_pos_solver_[m[K’ was not declared in this scope
+  319 |             [01;31m[Kfk_pos_solver_[m[K->JntToCart(qd_, xd_);
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:320:31:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  320 |             jnt_to_jac_solver_[01;31m[K->[m[KJntToJac(qd_, Jd_);
+      |                               [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:320:47:[m[K [01;31m[Kerror: [m[K‘[01m[KJd_[m[K’ was not declared in this scope; did you mean ‘[01m[KJ_[m[K’?
+  320 |             jnt_to_jac_solver_->JntToJac(qd_, [01;31m[KJd_[m[K);
+      |                                               [01;31m[K^~~[m[K
+      |                                               [32m[KJ_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:321:13:[m[K [01;31m[Kerror: [m[K‘[01m[KVd_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_[m[K’?
+  321 |             [01;31m[KVd_[m[K = Jd_ * qd_dot;
+      |             [01;31m[K^~~[m[K
+      |             [32m[Kqd_[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:321:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot[m[K’ was not declared in this scope; did you mean ‘[01m[Kqd_dot_[m[K’?
+  321 |             Vd_ = Jd_ * [01;31m[Kqd_dot[m[K;
+      |                         [01;31m[K^~~~~~[m[K
+      |                         [32m[Kqd_dot_[m[K
+In file included from [01m[K/opt/ros/noetic/include/class_loader/class_loader_core.hpp:45[m[K,
+                 from [01m[K/opt/ros/noetic/include/class_loader/class_loader.hpp:46[m[K,
+                 from [01m[K/opt/ros/noetic/include/pluginlib/./class_list_macros.hpp:40[m[K,
+                 from [01m[K/opt/ros/noetic/include/pluginlib/class_list_macros.h:35[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:5[m[K:
+/opt/ros/noetic/include/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = arm_controllers::velocity_controller; B = controller_interface::ControllerBase][m[K’:
+[01m[K/opt/ros/noetic/include/class_loader/meta_object.hpp:196:7:[m[K   required from here
+[01m[K/opt/ros/noetic/include/class_loader/meta_object.hpp:198:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Karm_controllers::velocity_controller::velocity_controller()[m[K’
+  198 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:27:7:[m[K [01;36m[Knote: [m[K‘[01m[Karm_controllers::velocity_controller::velocity_controller()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+   27 | class [01;36m[Kvelocity_controller[m[K : public controller_interface::Controller<hardware_interface::EffortJointInterface>
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:27:7:[m[K [01;31m[Kerror: [m[Kuninitialized const member in ‘[01m[Kclass arm_controllers::velocity_controller[m[K’
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:500:16:[m[K [01;36m[Knote: [m[K‘[01m[Kconst bool arm_controllers::velocity_controller::jointspace[m[K’ should be initialized
+  500 |     const bool [01;36m[Kjointspace[m[K;
+      |                [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
