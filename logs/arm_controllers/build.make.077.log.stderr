@@ -1,0 +1,40 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:570:68:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[Knew[m[K’
+  570 |     boost::scoped_ptr<KDL::ChainJntToJacSolver> jnt_to_jac_solver_([01;31m[Knew[m[K KDL::ChainJntToJacSolver);           // Solver to compute the jacobian
+      |                                                                    [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:570:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Knew[m[K’
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:571:71:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[Knew[m[K’
+  571 |     boost::scoped_ptr<KDL::ChainFkSolverPos_recursive> fk_pos_solver_([01;31m[Knew[m[K KDL::ChainFkSolverPos_recursive); //Solver to compute the forward kinematics (position)
+      |                                                                       [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:571:71:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Knew[m[K’
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::velocity_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:194:9:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kboost::scoped_ptr<KDL::ChainFkSolverPos_recursive> arm_controllers::velocity_controller::fk_pos_solver_(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  194 |         [01;31m[Kfk_pos_solver_[m[K.reset(new KDL::ChainFkSolverPos_recursive(kdl_chain_));
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:301:9:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kboost::scoped_ptr<KDL::ChainFkSolverPos_recursive> arm_controllers::velocity_controller::fk_pos_solver_(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  301 |         [01;31m[Kfk_pos_solver_[m[K ->JntToCart(qd_,xd_); // Desired frame
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:301:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  301 |         fk_pos_solver_ [01;31m[K->[m[KJntToCart(qd_,xd_); // Desired frame
+      |                        [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:302:9:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kboost::scoped_ptr<KDL::ChainJntToJacSolver> arm_controllers::velocity_controller::jnt_to_jac_solver_(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  302 |         [01;31m[Kjnt_to_jac_solver_[m[K ->JntToJac(qd_,Jd_); // Desired Jacobian
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:302:28:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  302 |         jnt_to_jac_solver_ [01;31m[K->[m[KJntToJac(qd_,Jd_); // Desired Jacobian
+      |                            [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:330:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kboost::scoped_ptr<KDL::ChainFkSolverPos_recursive> arm_controllers::velocity_controller::fk_pos_solver_(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  330 |             [01;31m[Kfk_pos_solver_[m[K ->JntToCart(q_,x_); // current frame
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:330:28:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  330 |             fk_pos_solver_ [01;31m[K->[m[KJntToCart(q_,x_); // current frame
+      |                            [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:353:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kboost::scoped_ptr<KDL::ChainJntToJacSolver> arm_controllers::velocity_controller::jnt_to_jac_solver_(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  353 |             [01;31m[Kjnt_to_jac_solver_[m[K ->JntToJac(q_,J_);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:353:32:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  353 |             jnt_to_jac_solver_ [01;31m[K->[m[KJntToJac(q_,J_);
+      |                                [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,10 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:350:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kqd_old_[m[K’
+  350 |         qd_.data = qd_old_.data[01;31m[K [m[K//+ J_inv_ * xd_dot_ * dt + 6 * J_inv_ * ex_ * dt;
+      |                                [01;31m[K^[m[K
+      |                                [32m[K;[m[K
+  351 |         [32m[Kqd_old_[m[K.data = qd_.data;
+      |         [32m[K~~~~~~~[m[K                 
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

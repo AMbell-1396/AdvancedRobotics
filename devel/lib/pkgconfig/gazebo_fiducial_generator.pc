@@ -1,0 +1,1 @@
+/home/advrob/elfin_ws/devel/.private/gazebo_fiducial_generator/lib/pkgconfig/gazebo_fiducial_generator.pc

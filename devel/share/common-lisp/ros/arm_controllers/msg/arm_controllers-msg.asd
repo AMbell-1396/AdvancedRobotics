@@ -1,0 +1,1 @@
+/home/advrob/elfin_ws/devel/.private/arm_controllers/share/common-lisp/ros/arm_controllers/msg/arm_controllers-msg.asd

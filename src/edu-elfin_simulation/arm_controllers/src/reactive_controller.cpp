@@ -44,9 +44,9 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     bool init(hardware_interface::EffortJointInterface *hw, ros::NodeHandle &n)
     {
         t_set = 1;
+
         joint_space = true;
         control_params = {0,0,0,0,0,0};
-        
 
         // ********* 1. Get joint name / gain from the parameter server *********
         // 1.1 Joint Name
@@ -250,7 +250,6 @@ class reactive_controller : public controller_interface::Controller<hardware_int
 
         //subscriber is not a member function & gets dropped after function (init) execution closes.
 
-
         n.getParam("/elfin/reactive_controller/reac_gain/K_UNIVERSAL", K_universal_);
  
         return true;
@@ -325,6 +324,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
             std::cout << "Couldn't open file: " << path << '\n';
         }
         return line;
+
     }
 
     void commandCB(const std_msgs::Float64MultiArrayConstPtr &msg)
@@ -380,9 +380,11 @@ class reactive_controller : public controller_interface::Controller<hardware_int
         if (readf_timer % 1000 == 0) {
             //task_string = textPasser("/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/burger_key.txt"); // via burger
             control_mode = textPasser("/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/control_mode.txt"); // control mode
+
             readf_timer = 0;
         }
         ++readf_timer;
+
 
         if (!joint_space)
         {
@@ -419,7 +421,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
             }
         }
         */
-
+        
         // CHOOSE CALC FOR WEIGHT TRIM
         if (!joint_space) 
         {
@@ -428,6 +430,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
             jnt_to_jac_solver_->JntToJac(q_, J_);   // Jacobian from joint space
             //J_transpose_ = J_.data.transpose();     // unused
             J_inv_ = J_.data.inverse();             // Jinv
+
             /*
             int sum = 0;
             for (int i=0; i < 6; ++i)
@@ -450,12 +453,14 @@ class reactive_controller : public controller_interface::Controller<hardware_int
                 xd_dot_(i) = 1 * ex_temp_(i);
                 xd_ddot_(i) = 1 * ex_temp_(i);
             }
+
             //closed loop inv kinematics with xd_dot
             //qd_.data = qd_old_.data + J_inv_ * (xd_dot_ + K_universal_ * ex_) * dt;
             
             qd_.data = (qd_old_.data * 0)+ J_inv_ * K_universal_ * ex_ * dt;
             qd_dot_.data = J_inv_ * (xd_dot_ + K_universal_ * ex_);
             qd_ddot_.data = (qd_dot_.data - qd_dot_old_.data) / dt; // qdd = qd d/dt
+
             /*
             for (size_t i = 0; i < n_joints_; i++)
             {
@@ -491,6 +496,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
         {
             // default behaviour
             aux_d_.data = M_.data * (qd_ddot_.data + Kp_.data.cwiseProduct(e_.data) + Kd_.data.cwiseProduct(e_dot_.data));
+
         }
         comp_d_.data = C_.data + G_.data;
         tau_d_.data = aux_d_.data + comp_d_.data;
@@ -504,7 +510,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
         save_data();
 
         // ********* 4. state 출력 *********
-        //print_state();
+        print_state();
     }
 
     double wrapToPi(double x) 
@@ -722,6 +728,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     std::string task_string;
     std::string control_mode;
     std::vector<float> control_params;
+
     bool joint_space;
 
     //Joint handles
@@ -781,6 +788,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     // gains
     KDL::JntArray Kp_, Ki_, Kd_;
 
+
     // save the data
     double SaveData_[SaveDataMax];
 
@@ -788,6 +796,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     ros::Publisher pub_qd_, pub_q_, pub_e_;
     ros::Publisher pub_SaveData_;
     ros::Publisher pub_Frame_as_Twist_;
+
 
     // ros message
     std_msgs::Float64MultiArray msg_qd_, msg_q_, msg_e_;
@@ -797,4 +806,6 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     ros::Subscriber sub_x_cmd_, sub_parse_command_;
 };
 }; // namespace arm_controllers
+PLUGINLIB_EXPORT_CLASS(arm_controllers::reactive_controller, controller_interface::ControllerBase)
+
 PLUGINLIB_EXPORT_CLASS(arm_controllers::reactive_controller, controller_interface::ControllerBase)

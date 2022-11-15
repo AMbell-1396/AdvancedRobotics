@@ -1,0 +1,35 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::reactive_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:240:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+  240 |         sub_key_ = ros[01;31m[K.[m[Ksubscribe<std_msgs::String>("key", 1, boost::bind(&Example::keyCmd, this, _1)); //topic, queue, callback, ??
+      |                       [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:240:50:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  240 |         sub_key_ = ros.subscribe<std_msgs::String[01;31m[K>[m[K("key", 1, boost::bind(&Example::keyCmd, this, _1)); //topic, queue, callback, ??
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:240:75:[m[K [01;31m[Kerror: [m[K‘[01m[KExample[m[K’ has not been declared
+  240 |         sub_key_ = ros.subscribe<std_msgs::String>("key", 1, boost::bind(&[01;31m[KExample[m[K::keyCmd, this, _1)); //topic, queue, callback, ??
+      |                                                                           [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::keyCmd(const ConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:248:33:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  248 |         printf(msg->data.c_str()[01;35m[K)[m[K;
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/class_loader/class_loader_core.hpp:45[m[K,
+                 from [01m[K/opt/ros/noetic/include/class_loader/class_loader.hpp:46[m[K,
+                 from [01m[K/opt/ros/noetic/include/pluginlib/./class_list_macros.hpp:40[m[K,
+                 from [01m[K/opt/ros/noetic/include/pluginlib/class_list_macros.h:35[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:5[m[K:
+/opt/ros/noetic/include/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = arm_controllers::reactive_controller; B = controller_interface::ControllerBase][m[K’:
+[01m[K/opt/ros/noetic/include/class_loader/meta_object.hpp:196:7:[m[K   required from here
+[01m[K/opt/ros/noetic/include/class_loader/meta_object.hpp:198:12:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[Karm_controllers::reactive_controller[m[K’
+  198 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:35:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[Karm_controllers::reactive_controller[m[K’:
+   35 | class [01;36m[Kreactive_controller[m[K : public controller_interface::Controller<hardware_interface::EffortJointInterface>
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:73:16:[m[K [01;36m[Knote: [m[K	‘[01m[Kvirtual void controller_interface::ControllerBase::update(const ros::Time&, const ros::Duration&)[m[K’
+   73 |   virtual void [01;36m[Kupdate[m[K(const ros::Time& time, const ros::Duration& period) = 0;
+      |                [01;36m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

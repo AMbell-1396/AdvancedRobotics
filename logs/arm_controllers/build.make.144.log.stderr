@@ -1,0 +1,13 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::commandCB(const Float64MultiArrayConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:253:45:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char [23][m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to binary ‘[01m[Koperator<<[m[K’
+  253 |             printf([32m[K"Dimension of command ("[m[K [01;31m[K<<[m[K [34m[Kmsg->data.size()[m[K << ") does not match DOF of Task Space (" << 2 << ")! Not executing!");
+      |                    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^~[m[K [34m[K~~~~~~~~~~~~~~~~[m[K
+      |                    [32m[K|[m[K                                         [34m[K|[m[K
+      |                    [32m[Kconst char [23][m[K                           [34m[Kstd::vector<double>::size_type {aka long unsigned int}[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::keyCmd(const ConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:268:33:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  268 |         printf(msg->data.c_str()[01;35m[K)[m[K;
+      |                                 [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,25 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:826:28:[m[K [01;31m[Kerror: [m[K‘[01m[KChainFkSolverVel_recursive[m[K’ is not a member of ‘[01m[KKDL[m[K’; did you mean ‘[01m[KChainFkSolverPos_recursive[m[K’?
+  826 |     boost::scoped_ptr<KDL::[01;31m[KChainFkSolverVel_recursive[m[K> fk_vel_solver_; //Solver to compute the forward kinematics (velocity)
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[KChainFkSolverPos_recursive[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:826:28:[m[K [01;31m[Kerror: [m[K‘[01m[KChainFkSolverVel_recursive[m[K’ is not a member of ‘[01m[KKDL[m[K’; did you mean ‘[01m[KChainFkSolverPos_recursive[m[K’?
+  826 |     boost::scoped_ptr<KDL::[01;31m[KChainFkSolverVel_recursive[m[K> fk_vel_solver_; //Solver to compute the forward kinematics (velocity)
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[KChainFkSolverPos_recursive[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:826:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  826 |     boost::scoped_ptr<KDL::ChainFkSolverVel_recursive[01;31m[K>[m[K fk_vel_solver_; //Solver to compute the forward kinematics (velocity)
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::velocity_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:234:24:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kreset[m[K’ in ‘[01m[K((arm_controllers::velocity_controller*)this)->arm_controllers::velocity_controller::fk_vel_solver_[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  234 |         fk_vel_solver_.[01;31m[Kreset[m[K(new KDL::ChainFkSolverVel_recursive(kdl_chain_));
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:234:34:[m[K [01;31m[Kerror: [m[Kexpected type-specifier
+  234 |         fk_vel_solver_.reset(new [01;31m[KKDL[m[K::ChainFkSolverVel_recursive(kdl_chain_));
+      |                                  [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::velocity_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:322:23:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  322 |         fk_vel_solver_[01;31m[K->[m[KJntToCart(q_, x_, qdot_));
+      |                       [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

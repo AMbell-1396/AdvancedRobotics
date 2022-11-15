@@ -1,0 +1,92 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::keyCmd(const ConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:253:33:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  253 |         printf(msg->data.c_str()[01;35m[K)[m[K;
+      |                                 [01;35m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kbool arm_controllers::reactive_controller::burgerPasser(const string&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:270:37:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::__cxx11::basic_string<char>::basic_string(std::string*)[m[K’
+  270 |             printf(std::string(&text[01;31m[K)[m[K );
+      |                                     [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:31[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/node_handle.h:31[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:629:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _InputIterator, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)[m[K’
+  629 |         [01;36m[Kbasic_string[m[K(_InputIterator __beg, _InputIterator __end,
+      |         [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:629:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:270:37:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+  270 |             printf(std::string(&text[01;36m[K)[m[K );
+      |                                     [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:31[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/node_handle.h:31[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:591:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  591 |       [01;36m[Kbasic_string[m[K(basic_string&& __str, const _Alloc& __a)
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:591:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:587:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  587 |       [01;36m[Kbasic_string[m[K(const basic_string& __str, const _Alloc& __a)
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:587:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:583:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  583 |       [01;36m[Kbasic_string[m[K(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc())
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:583:45:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string*[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>*[m[K’} to ‘[01m[Kstd::initializer_list<char>[m[K’
+  583 |       basic_string([01;36m[Kinitializer_list<_CharT> __l[m[K, const _Alloc& __a = _Alloc())
+      |                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:556:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  556 |       [01;36m[Kbasic_string[m[K(basic_string&& __str) noexcept
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:556:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string*[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>*[m[K’} to ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’
+  556 |       basic_string([01;36m[Kbasic_string&& __str[m[K) noexcept
+      |                    [01;36m[K~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:544:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int][m[K’
+  544 |       [01;36m[Kbasic_string[m[K(size_type __n, _CharT __c, const _Alloc& __a = _Alloc())
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:544:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:529:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  529 |       [01;36m[Kbasic_string[m[K(const _CharT* __s, const _Alloc& __a = _Alloc())
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:529:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string*[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>*[m[K’} to ‘[01m[Kconst char*[m[K’
+  529 |       basic_string([01;36m[Kconst _CharT* __s[m[K, const _Alloc& __a = _Alloc())
+      |                    [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:514:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int][m[K’
+  514 |       [01;36m[Kbasic_string[m[K(const _CharT* __s, size_type __n,
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:514:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:496:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int][m[K’
+  496 |       [01;36m[Kbasic_string[m[K(const basic_string& __str, size_type __pos,
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:496:7:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:480:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int][m[K’
+  480 |       [01;36m[Kbasic_string[m[K(const basic_string& __str, size_type __pos,
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:480:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:465:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int][m[K’
+  465 |       [01;36m[Kbasic_string[m[K(const basic_string& __str, size_type __pos,
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:465:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/basic_string.h:452:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  452 |       [01;36m[Kbasic_string[m[K(const basic_string& __str)
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:452:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string*[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>*[m[K’} to ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’
+  452 |       basic_string([01;36m[Kconst basic_string& __str[m[K)
+      |                    [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:444:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  444 |       [01;36m[Kbasic_string[m[K(const _Alloc& __a) _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:444:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string*[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>*[m[K’} to ‘[01m[Kconst std::allocator<char>&[m[K’
+  444 |       basic_string([01;36m[Kconst _Alloc& __a[m[K) _GLIBCXX_NOEXCEPT
+      |                    [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:435:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+  435 |       [01;36m[Kbasic_string[m[K()
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:435:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

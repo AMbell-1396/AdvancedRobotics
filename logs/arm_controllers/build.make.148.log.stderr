@@ -1,0 +1,12 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::keyCmd(const ConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:270:33:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  270 |         printf(msg->data.c_str()[01;35m[K)[m[K;
+      |                                 [01;35m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::reactive_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:384:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kprtintf[m[K’ was not declared in this scope; did you mean ‘[01m[Kprintf[m[K’?
+  384 |             if (!TASK_SPACE) {[01;31m[Kprtintf[m[K("TIMEOUT");}
+      |                               [01;31m[K^~~~~~~[m[K
+      |                               [32m[Kprintf[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

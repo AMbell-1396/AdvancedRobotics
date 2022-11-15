@@ -1,0 +1,7 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp:571:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  571 |     boost::scoped_ptr<KDL::ChainFkSolverPos_recursive> [01;31m[Kfk_pos_solver_[m[K   //Solver to compute the forward kinematics (position)
+      |                                                        [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                                      [32m[K;[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:141: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

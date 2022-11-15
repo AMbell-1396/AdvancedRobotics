@@ -1,0 +1,325 @@
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:347:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_[m[K’ does not name a type
+  347 |         [01;31m[Ke_[m[K.data = qd_.data - q_.data;
+      |         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:348:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_dot_[m[K’ does not name a type
+  348 |         [01;31m[Ke_dot_[m[K.data = qd_dot_.data - qdot_.data;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:349:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_int_[m[K’ does not name a type; did you mean ‘[01m[Ku_int[m[K’?
+  349 |         [01;31m[Ke_int_[m[K.data = qd_.data - q_.data;           // (To do: e_int 업데이트 필요요)
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ku_int[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:352:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kid_solver_[m[K’ does not name a type
+  352 |         [01;31m[Kid_solver_[m[K->JntToMass(q_, M_);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:353:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kid_solver_[m[K’ does not name a type
+  353 |         [01;31m[Kid_solver_[m[K->JntToCoriolis(q_, qdot_, C_);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:354:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kid_solver_[m[K’ does not name a type
+  354 |         [01;31m[Kid_solver_[m[K->JntToGravity(q_, G_);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:357:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kaux_d_[m[K’ does not name a type
+  357 |         [01;31m[Kaux_d_[m[K.data = M_.data * (qd_ddot_.data + Kp_.data.cwiseProduct(e_.data) + Kd_.data.cwiseProduct(e_dot_.data));
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:359:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcomp_d_[m[K’ does not name a type
+  359 |         [01;31m[Kcomp_d_[m[K.data = C_.data + G_.data;
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:360:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktau_d_[m[K’ does not name a type
+  360 |         [01;31m[Ktau_d_[m[K.data = aux_d_.data + comp_d_.data;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:362:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfor[m[K’
+  362 |         [01;31m[Kfor[m[K (int i = 0; i < n_joints_; i++)
+      |         [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:362:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+  362 |         for (int i = 0; [01;31m[Ki[m[K < n_joints_; i++)
+      |                         [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:362:40:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+  362 |         for (int i = 0; i < n_joints_; [01;31m[Ki[m[K++)
+      |                                        [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:369:19:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Ksave_data[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  369 |         save_data([01;31m[K)[m[K;
+      |                   [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:373:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  373 |     }
+      |      [01;31m[K^[m[K
+      |      [32m[K;[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool arm_controllers::reactive_controller::init(hardware_interface::EffortJointInterface*, ros::NodeHandle&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:47:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_names_[m[K’ was not declared in this scope
+   47 |         if (!n.getParam("joints", [01;31m[Kjoint_names_[m[K))
+      |                                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_joints_[m[K’ was not declared in this scope
+   52 |         [01;31m[Kn_joints_[m[K = joint_names_.size();
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:52:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_names_[m[K’ was not declared in this scope
+   52 |         n_joints_ = [01;31m[Kjoint_names_[m[K.size();
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:70:9:[m[K [01;31m[Kerror: [m[K‘[01m[KKp_[m[K’ was not declared in this scope
+   70 |         [01;31m[KKp_[m[K.resize(n_joints_);
+      |         [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:71:9:[m[K [01;31m[Kerror: [m[K‘[01m[KKd_[m[K’ was not declared in this scope
+   71 |         [01;31m[KKd_[m[K.resize(n_joints_);
+      |         [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:72:9:[m[K [01;31m[Kerror: [m[K‘[01m[KKi_[m[K’ was not declared in this scope
+   72 |         [01;31m[KKi_[m[K.resize(n_joints_);
+      |         [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:127:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoints_[m[K’ was not declared in this scope
+  127 |                 [01;31m[Kjoints_[m[K.push_back(hw->getHandle(joint_names_[i]));
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:141:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_urdfs_[m[K’ was not declared in this scope; did you mean ‘[01m[Kjoint_urdf[m[K’?
+  141 |             [01;31m[Kjoint_urdfs_[m[K.push_back(joint_urdf);
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+      |             [32m[Kjoint_urdf[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:146:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kkdl_tree_[m[K’ was not declared in this scope
+  146 |         if (!kdl_parser::treeFromUrdfModel(urdf, [01;31m[Kkdl_tree_[m[K))
+      |                                                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:168:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kkdl_tree_[m[K’ was not declared in this scope
+  168 |         if (![01;31m[Kkdl_tree_[m[K.getChain(root_name, tip_name, kdl_chain_))
+      |              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:168:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kkdl_chain_[m[K’ was not declared in this scope
+  168 |         if (!kdl_tree_.getChain(root_name, tip_name, [01;31m[Kkdl_chain_[m[K))
+      |                                                      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:190:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgravity_[m[K’ was not declared in this scope
+  190 |         [01;31m[Kgravity_[m[K = KDL::Vector::Zero(); // ?
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:193:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kid_solver_[m[K’ was not declared in this scope
+  193 |         [01;31m[Kid_solver_[m[K.reset(new KDL::ChainDynParam(kdl_chain_, gravity_));
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:193:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kkdl_chain_[m[K’ was not declared in this scope
+  193 |         id_solver_.reset(new KDL::ChainDynParam([01;31m[Kkdl_chain_[m[K, gravity_));
+      |                                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:196:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kfk_pos_solver_[m[K’ was not declared in this scope
+  196 |         [01;31m[Kfk_pos_solver_[m[K.reset(new KDL::ChainFkSolverPos_recursive(kdl_chain_));
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:199:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjnt_to_jac_solver_[m[K’ was not declared in this scope
+  199 |         [01;31m[Kjnt_to_jac_solver_[m[K.reset(new KDL::ChainJntToJacSolver(kdl_chain_));
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:204:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktau_d_[m[K’ was not declared in this scope
+  204 |         [01;31m[Ktau_d_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:206:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_[m[K’ was not declared in this scope
+  206 |         [01;31m[Kqd_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:207:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot_[m[K’ was not declared in this scope
+  207 |         [01;31m[Kqd_dot_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:208:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_ddot_[m[K’ was not declared in this scope
+  208 |         [01;31m[Kqd_ddot_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:209:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_old_[m[K’ was not declared in this scope
+  209 |         [01;31m[Kqd_old_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:211:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_[m[K’ was not declared in this scope
+  211 |         [01;31m[Kq_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:212:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kqdot_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqsort_r[m[K’?
+  212 |         [01;31m[Kqdot_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~[m[K
+      |         [32m[Kqsort_r[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:214:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_[m[K’ was not declared in this scope
+  214 |         [01;31m[Ke_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:215:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_dot_[m[K’ was not declared in this scope
+  215 |         [01;31m[Ke_dot_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:216:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_int_[m[K’ was not declared in this scope; did you mean ‘[01m[Ku_int[m[K’?
+  216 |         [01;31m[Ke_int_[m[K.data = Eigen::VectorXd::Zero(n_joints_);
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ku_int[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:219:9:[m[K [01;31m[Kerror: [m[K‘[01m[KJ_[m[K’ was not declared in this scope
+  219 |         [01;31m[KJ_[m[K.resize(kdl_chain_.getNrOfJoints());
+      |         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:220:9:[m[K [01;31m[Kerror: [m[K‘[01m[KJd_[m[K’ was not declared in this scope
+  220 |         [01;31m[KJd_[m[K.resize(kdl_chain_.getNrOfJoints());
+      |         [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:221:9:[m[K [01;31m[Kerror: [m[K‘[01m[KM_[m[K’ was not declared in this scope; did you mean ‘[01m[KM_E[m[K’?
+  221 |         [01;31m[KM_[m[K.resize(kdl_chain_.getNrOfJoints());
+      |         [01;31m[K^~[m[K
+      |         [32m[KM_E[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:222:9:[m[K [01;31m[Kerror: [m[K‘[01m[KC_[m[K’ was not declared in this scope
+  222 |         [01;31m[KC_[m[K.resize(kdl_chain_.getNrOfJoints());
+      |         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:223:9:[m[K [01;31m[Kerror: [m[K‘[01m[KG_[m[K’ was not declared in this scope
+  223 |         [01;31m[KG_[m[K.resize(kdl_chain_.getNrOfJoints());
+      |         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:227:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_qd_[m[K’ was not declared in this scope
+  227 |         [01;31m[Kpub_qd_[m[K = n.advertise<std_msgs::Float64MultiArray>("qd", 1000);
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:228:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_q_[m[K’ was not declared in this scope
+  228 |         [01;31m[Kpub_q_[m[K = n.advertise<std_msgs::Float64MultiArray>("q", 1000);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:229:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_e_[m[K’ was not declared in this scope
+  229 |         [01;31m[Kpub_e_[m[K = n.advertise<std_msgs::Float64MultiArray>("e", 1000);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:231:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_SaveData_[m[K’ was not declared in this scope
+  231 |         [01;31m[Kpub_SaveData_[m[K = n.advertise<std_msgs::Float64MultiArray>("SaveData", 1000); // 뒤에 숫자는?
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:234:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_x_cmd_[m[K’ was not declared in this scope
+  234 |         [01;31m[Ksub_x_cmd_[m[K = n.subscribe<std_msgs::Float64MultiArray>("command", 1, &reactive_controller::commandCB, this);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:235:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kevent[m[K’ was not declared in this scope
+  235 |         [01;31m[Kevent[m[K = 0; // subscribe 받기 전: 0
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:239:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_key_[m[K’ was not declared in this scope
+  239 |         [01;31m[Ksub_key_[m[K = n.subscribe<std_msgs::String>("key", 1, boost::bind(&reactive_controller::keyCmd, this, _1)); //topic, queue length, callback handle, instance Object
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kstd::string arm_controllers::reactive_controller::keyCmd(const ConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:248:33:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+  248 |         printf(msg->data.c_str()[01;35m[K)[m[K;
+      |                                 [01;35m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:251:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_string[m[K’ was not declared in this scope
+  251 |         [01;31m[Ktask_string[m[K = msg->data.c_str();
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:252:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  252 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::commandCB(const Float64MultiArrayConstPtr&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:285:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_cmd_[m[K’ was not declared in this scope
+  285 |             [01;31m[Kx_cmd_[m[K(i) = msg->data[i];
+      |             [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:288:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kevent[m[K’ was not declared in this scope
+  288 |         [01;31m[Kevent[m[K = 1; // subscribe 받기 전: 0
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::reactive_controller::starting(const ros::Time&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:294:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  294 |         [01;31m[Kt[m[K = 0.0;
+      |         [01;31m[K^[m[K
+      |         [32m[Ktm[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::reactive_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:303:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  303 |         [01;31m[Kt[m[K = t + dt;
+      |         [01;31m[K^[m[K
+      |         [32m[Ktm[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:306:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_joints_[m[K’ was not declared in this scope
+  306 |         for (int i = 0; i < [01;31m[Kn_joints_[m[K; i++)
+      |                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:308:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_[m[K’ was not declared in this scope
+  308 |             [01;31m[Kq_[m[K(i) = joints_[i].getPosition();
+      |             [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:308:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoints_[m[K’ was not declared in this scope
+  308 |             q_(i) = [01;31m[Kjoints_[m[K[i].getPosition();
+      |                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:309:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kqdot_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqsort_r[m[K’?
+  309 |             [01;31m[Kqdot_[m[K(i) = joints_[i].getVelocity();
+      |             [01;31m[K^~~~~[m[K
+      |             [32m[Kqsort_r[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:314:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kreadf_timer[m[K’ was not declared in this scope
+  314 |         if ([01;31m[Kreadf_timer[m[K % 1000 == 0) {
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:315:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_string[m[K’ was not declared in this scope
+  315 |             [01;31m[Ktask_string[m[K = burgerPasser(); // via burger
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:318:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kreadf_timer[m[K’ was not declared in this scope
+  318 |         ++[01;31m[Kreadf_timer[m[K;
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:320:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_string[m[K’ was not declared in this scope
+  320 |         if ([01;31m[Ktask_string[m[K == "KEY_DOWN")) {
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:320:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  320 |         if (task_string == "KEY_DOWN")[01;31m[K)[m[K {
+      |                                       [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:328:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_joints_[m[K’ was not declared in this scope
+  328 |             for (size_t i = 0; i < [01;31m[Kn_joints_[m[K; i++)
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:330:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_ddot_[m[K’ was not declared in this scope
+  330 |                 [01;31m[Kqd_ddot_[m[K(i) = -0.3*t;
+      |                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:331:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot_[m[K’ was not declared in this scope
+  331 |                 [01;31m[Kqd_dot_[m[K(i) = -0.2*t;
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:332:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_[m[K’ was not declared in this scope
+  332 |                 [01;31m[Kqd_[m[K(i) = -0.1*t;
+      |                 [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:335:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K:[m[K’ token
+  335 |         else[01;31m[K:[m[K
+      |             [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:337:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+  337 |             for (size_t i = 0; [01;31m[Ki[m[K < n_joints_; i++)
+      |                                [01;31m[K^[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:337:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_joints_[m[K’ was not declared in this scope
+  337 |             for (size_t i = 0; i < [01;31m[Kn_joints_[m[K; i++)
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In function ‘[01m[Kvoid arm_controllers::save_data()[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:383:9:[m[K [01;31m[Kerror: [m[K‘[01m[KSaveData_[m[K’ was not declared in this scope; did you mean ‘[01m[KSaveDataMax[m[K’?
+  383 |         [01;31m[KSaveData_[m[K[0] = t;
+      |         [01;31m[K^~~~~~~~~[m[K
+      |         [32m[KSaveDataMax[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:383:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  383 |         SaveData_[0] = [01;31m[Kt[m[K;
+      |                        [01;31m[K^[m[K
+      |                        [32m[Ktm[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:386:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_[m[K’ was not declared in this scope
+  386 |         SaveData_[1] = [01;31m[Kqd_[m[K(0);
+      |                        [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:394:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_dot_[m[K’ was not declared in this scope
+  394 |         SaveData_[7] = [01;31m[Kqd_dot_[m[K(0);
+      |                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:402:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_ddot_[m[K’ was not declared in this scope
+  402 |         SaveData_[13] = [01;31m[Kqd_ddot_[m[K(0);
+      |                         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:410:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_[m[K’ was not declared in this scope
+  410 |         SaveData_[19] = [01;31m[Kq_[m[K(0);
+      |                         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:418:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kqdot_[m[K’ was not declared in this scope; did you mean ‘[01m[Kqsort_r[m[K’?
+  418 |         SaveData_[25] = [01;31m[Kqdot_[m[K(0);
+      |                         [01;31m[K^~~~~[m[K
+      |                         [32m[Kqsort_r[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:426:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_[m[K’ was not declared in this scope
+  426 |         SaveData_[31] = [01;31m[Ke_[m[K(0);
+      |                         [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:434:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_dot_[m[K’ was not declared in this scope
+  434 |         SaveData_[37] = [01;31m[Ke_dot_[m[K(0);
+      |                         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:442:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_int_[m[K’ was not declared in this scope; did you mean ‘[01m[Ku_int[m[K’?
+  442 |         SaveData_[43] = [01;31m[Ke_int_[m[K(0);
+      |                         [01;31m[K^~~~~~[m[K
+      |                         [32m[Ku_int[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:450:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_qd_[m[K’ was not declared in this scope
+  450 |         [01;31m[Kmsg_qd_[m[K.data.clear();
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:451:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_q_[m[K’ was not declared in this scope
+  451 |         [01;31m[Kmsg_q_[m[K.data.clear();
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:452:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_e_[m[K’ was not declared in this scope
+  452 |         [01;31m[Kmsg_e_[m[K.data.clear();
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:454:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_SaveData_[m[K’ was not declared in this scope
+  454 |         [01;31m[Kmsg_SaveData_[m[K.data.clear();
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:457:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_joints_[m[K’ was not declared in this scope
+  457 |         for (int i = 0; i < [01;31m[Kn_joints_[m[K; i++)
+      |                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:470:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_qd_[m[K’ was not declared in this scope
+  470 |         [01;31m[Kpub_qd_[m[K.publish(msg_qd_);
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:471:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_q_[m[K’ was not declared in this scope
+  471 |         [01;31m[Kpub_q_[m[K.publish(msg_q_);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:472:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_e_[m[K’ was not declared in this scope
+  472 |         [01;31m[Kpub_e_[m[K.publish(msg_e_);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:474:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_SaveData_[m[K’ was not declared in this scope
+  474 |         [01;31m[Kpub_SaveData_[m[K.publish(msg_SaveData_);
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In function ‘[01m[Kvoid arm_controllers::print_state()[m[K’:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:484:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  484 |             printf("t = %f\n", [01;31m[Kt[m[K);
+      |                                [01;31m[K^[m[K
+      |                                [32m[Ktm[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:488:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_[m[K’ was not declared in this scope
+  488 |             printf("qd_(0): %f, ", [01;31m[Kqd_[m[K(0)*R2D);
+      |                                    [01;31m[K^~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:497:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_[m[K’ was not declared in this scope
+  497 |             printf("q_(0): %f, ", [01;31m[Kq_[m[K(0) * R2D);
+      |                                   [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:507:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_[m[K’ was not declared in this scope
+  507 |             printf("%f, ", R2D * [01;31m[Ke_[m[K(0));
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K At global scope:
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:521:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+  521 |   [01;31m[Kprivate[m[K:
+      |   [01;31m[K^~~~~~~[m[K
+[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:598:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  598 | [01;31m[K}[m[K; // namespace arm_controllers
+      | [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
