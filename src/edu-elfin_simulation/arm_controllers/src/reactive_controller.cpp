@@ -5,6 +5,7 @@
 #include <pluginlib/class_list_macros.h>
 #include <std_msgs/Float64MultiArray.h>
 #include <std_msgs/String.h>
+#include <geometry_msgs/Twist.h>
 
 #include <urdf/model.h>
 
@@ -44,6 +45,9 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     {
         t_set = 1;
 
+        joint_space = true;
+        control_params = {0,0,0,0,0,0};
+
         // ********* 1. Get joint name / gain from the parameter server *********
         // 1.1 Joint Name
         if (!n.getParam("joints", joint_names_))
@@ -72,8 +76,6 @@ class reactive_controller : public controller_interface::Controller<hardware_int
         Kp_.resize(n_joints_);
         Kd_.resize(n_joints_);
         Ki_.resize(n_joints_);
-        Kp_use_.resize(n_joints_);
-        Kd_use_.resize(n_joints_);
 
         std::vector<double> Kp(n_joints_), Ki(n_joints_), Kd(n_joints_);
         for (size_t i = 0; i < n_joints_; i++)
@@ -235,46 +237,94 @@ class reactive_controller : public controller_interface::Controller<hardware_int
 
         pub_SaveData_ = n.advertise<std_msgs::Float64MultiArray>("SaveData", 1000); // 뒤에 숫자는?
 
+        pub_Frame_as_Twist_ = n.advertise<geometry_msgs::Twist>("FrameAsTwist", 1000);
+
         // 6.2 subsriber
         sub_x_cmd_ = n.subscribe<std_msgs::Float64MultiArray>("command", 1, &reactive_controller::commandCB, this);
         event = 0; // subscribe 받기 전: 0
                    // subscribe 받은 후: 1
         
         //alternative subscribe method that accepts member functions and the corresponding object 
-        sub_key_ = n.subscribe<std_msgs::String>("key", 1, boost::bind(&reactive_controller::keyCmd, this, _1)); //topic, queue length, callback handle, instance Object
+        //sub_parse_command_ = n.subscribe<geometry_msgs::Twist>("cmdTwist", 10, boost::bind(&reactive_controller::cmdParser, this, _1)); //topic, queue length, callback handle, instance Object
+        sub_parse_command_ = n.subscribe<std_msgs::String>("cmdString", 1, boost::bind(&reactive_controller::cmdStringParser, this, _1)); //topic, queue length, callback handle, instance Object
+
         //subscriber is not a member function & gets dropped after function (init) execution closes.
 
-
-        n.getParam("/elfin/computed_torque_clik_controller/reac_gain/K_UNIVERSAL", K_universal_);
+        n.getParam("/elfin/reactive_controller/reac_gain/K_UNIVERSAL", K_universal_);
  
         return true;
     }
 
-    void keyCmd(const std_msgs::String::ConstPtr &msg)
+    void cmdStringParser(const std_msgs::String::ConstPtr& msg)
     {
-        //if (msg->data.c_str() == "KEY_DOWN") 
-        task_string = msg->data.c_str();
+        const std::string s = msg->data.c_str();
+        
+        std::vector<std::string> parts;
+        const char delim = ';';
+
+        std::string::size_type beg = 0;
+        for (auto end = 0; (end = s.find(delim, end)) != std::string::npos; ++end)
+        {
+            parts.push_back(s.substr(beg, end - beg));
+            beg = end + 1;
+        }
+        
+        parts.push_back(s.substr(beg));
+        
+        control_params[0] = std::stof(parts[0]);
+        control_params[1] = std::stof(parts[1]);
+        control_params[2] = std::stof(parts[2]);
+        control_params[3] = std::stof(parts[3]);
+        control_params[4] = std::stof(parts[4]);
+        control_params[5] = std::stof(parts[5]);
+
+        joint_space = false;
     }
 
-    // incredible text passer
-    std::string burgerPasser(std::string path) 
-    {
-        //std::string path = ;
-        std::ifstream ifs;
-        std::string text;
-        bool transfer_cond;
-        ifs.open(path);
 
-        if (ifs.is_open())
-            getline(ifs, text);
+    // the following func doesn't work because of implicit BOOST double->float conversion (?)
+    /*
+    void cmdParser(const geometry_msgs::Twist::ConstPtr& msg)
+    {
+        std::cout << "cmdCallback";
+
+        //control_params (global) data: [xd.p(1), xd.p(2), xd.p(3), xd.M(1), xd.M(2), xd.M(3)]
+
+        xd_.p(1) = msg->linear.x;
+        xd_.p(2) = msg->linear.y;
+        xd_.p(3) = msg->linear.z;
+        KDL::Rotation(KDL::Rotation::RPY(msg->angular.x, msg->angular.x, msg->angular.z));
+        
+        //reset if all cmd = 0 (unknown cases)
+        if (msg->linear.x == msg->linear.y == msg->linear.z == msg->angular.x == msg->angular.y == msg->angular.z == 0) {
+            std::vector<float> control_params;
+        }
         else {
-            std::cout << "can't open file";
+            control_params[0] = msg->linear.x;
+            control_params[1] = msg->linear.y;
+            control_params[2] = msg->linear.z;
+            control_params[3] = msg->angular.x;
+            control_params[4] = msg->angular.y;
+            control_params[5] = msg->angular.z;
         }
-        if (text != "") {
-            //std::cout << text << "\n";
+    }
+    */
+
+    //read text file content & return first line
+    std::string textPasser(std::string path) 
+    {
+        std::string line;
+        std::ifstream file(path);
+        if (file.is_open()) {
+            std::getline(file, line);
+            
+
+            file.close();
+        } else {
+            std::cout << "Couldn't open file: " << path << '\n';
         }
-        ifs.close();
-        return std::string(text);
+        return line;
+
     }
 
     void commandCB(const std_msgs::Float64MultiArrayConstPtr &msg)
@@ -322,167 +372,43 @@ class reactive_controller : public controller_interface::Controller<hardware_int
         }
         // 0.3 end-effector state by Compute forward kinematics (x_,xdot_)
         fk_pos_solver_->JntToCart(q_, x_);
+
         xdot_ = J_.data * qdot_.data;
 
         // ********* 2. Motion Controller in Joint Space*********
 
         if (readf_timer % 1000 == 0) {
-            //task_string = burgerPasser("/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/burger_key.txt"); // via burger
-            control_string = burgerPasser("control_mode.txt"); // control mode
+            //task_string = textPasser("/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/burger_key.txt"); // via burger
+            control_mode = textPasser("/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/control_mode.txt"); // control mode
+
             readf_timer = 0;
         }
         ++readf_timer;
 
 
-        if (task_string == "KEY_DOWN") 
+        if (!joint_space)
         {
+            joint_space = false;
 
-            joint_space = true;
-            for (size_t i = 3; i < n_joints_; i++)
-            {
-                // JOINT SPACE BOT OSCILLATION
-                qd_ddot_(i) = sin(t); 
-                qd_dot_(i) = sin(t);
-                qd_(i) = sin(t);
-            }
-        } else if (task_string == "KEY_UP") 
-        {
-
-            joint_space = true;
-            for (size_t i = 0; i < n_joints_-2; i++)
-            {
-                // JOINT SPACE TOP OSCILLATION
-                qd_ddot_(i) = -sin(t); 
-                qd_dot_(i) = -sin(t);          
-                qd_(i) = -sin(t);
-            }
+            //convert string control params to double
+            xd_.p(0) = control_params[0];
+            xd_.p(1) = control_params[1];
+            xd_.p(2) = control_params[2];
+            xd_.M = KDL::Rotation(KDL::Rotation::RPY(control_params[3], control_params[4], control_params[5]));
         }
-        else if (task_string == "KEY_RIGHT") 
+        
+        else 
         {
-
             joint_space = true;
-            // JOINT SPACE CUMUL STOP
-            for (size_t i = 0; i < n_joints_-2; i++)
-            {
-                qd_ddot_(i) = 0;
-                qd_dot_(i) = 0;
-                qd_(i) = q_(i);
-            }
-        }
-        else if (task_string == "KEY_LEFT") 
-        {
-
-            joint_space = true;   
-            // JOINT SPACE 0-POS
-            for (size_t i = 0; i < n_joints_-2; i++)
-            {
-                qd_ddot_(i) = 0;
-                qd_dot_(i) = 0;
-                qd_(i) = 0;
-            }
-        }
-        else if (task_string == "o") 
-        {
-
-            joint_space = true;
-            // JOINT SPACE EXPLODE
             for (size_t i = 0; i < n_joints_; i++)
             {
-                qd_ddot_(i) = 8 / std::pow(std::sqrt(-4*std::pow(t,2) + 4*t + 3),3);
-                qd_dot_(i) = (2*t - 1) / std::sqrt(-4*std::pow(t,2) + 4*t + 3);
-                qd_(i) = 1/2*std::sqrt(-4*std::pow(t,2) + 4*t + 3) + 1;
+                // sin oscillation
+                qd_ddot_(i) = -M_PI * M_PI / 4 * 45 * KDL::deg2rad * sin(M_PI / 2); 
+                qd_dot_(i) = M_PI / 2 * 45 * KDL::deg2rad * cos(M_PI / 2);          
+                qd_(i) = 45 * KDL::deg2rad * sin(M_PI / 2);
             }
         }
-        else if (task_string == "s")
-        {
-
-            joint_space = true;
-            // JOINT SPACE FULL STOP
-            for (size_t i = 0; i < n_joints_-2; i++)
-            {
-                qd_ddot_(i) = 0;
-                qd_dot_(i) = 0;
-                qd_(i) = qd_(i);
-            }
-        }
-        else if (task_string == "d")
-        {
-
-            joint_space = true;
-            // JOINT SPACE FULL STOP KEEP ACCEL
-            for (size_t i = 0; i < n_joints_-2; i++)
-            {
-                qd_ddot_(i) = qd_ddot_(i);
-                qd_dot_(i) = 0;
-                qd_(i) = qd_(i);
-            }
-        }
-        else if (task_string == "v") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.0;
-            xd_.p(1) = -0.32;
-            xd_.p(2) = 0.56;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0, 0, 0));
-        }
-        else if (task_string == "b") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.0;
-            xd_.p(1) = 0.32;
-            xd_.p(2) = 0.56;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0, 0, 0));
-        }
-        else if (task_string == "n") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.32;
-            xd_.p(1) = 0.32;
-            xd_.p(2) = 0.32;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0, 0, 0));
-        }
-        else if (task_string == "m") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.0;
-            xd_.p(1) = -0.32;
-            xd_.p(2) = 0.56;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0.0, -0.32, 0.56));
-        }
-        else if (task_string == "x") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.8;
-            xd_.p(1) = 0.0001;
-            xd_.p(2) = 0.0001;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0, 0, 0));
-        }
-        else if (task_string == "y") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.0001;
-            xd_.p(1) = 0.8;
-            xd_.p(2) = 0.0001;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0, 0, 0));
-
-        }
-        else if (task_string == "z") 
-        {
-            // TASK SPACE GET TO POS
-            joint_space = false;
-            xd_.p(0) = 0.0001;
-            xd_.p(1) = 0.0001;
-            xd_.p(2) = 0.8;
-            xd_.M = KDL::Rotation(KDL::Rotation::RPY(0, 0, 0));
-
-        }
-        else 
+        /*
         {
             joint_space = true;
             // ********* Desired Trajectory in Joint Space *********
@@ -494,9 +420,8 @@ class reactive_controller : public controller_interface::Controller<hardware_int
                 qd_(i) = 45 * KDL::deg2rad * sin(M_PI / 2* t);
             }
         }
-
-        Kp_use_ = Kp_;
-        Kd_use_ = Kd_;
+        */
+        
         // CHOOSE CALC FOR WEIGHT TRIM
         if (!joint_space) 
         {
@@ -505,6 +430,18 @@ class reactive_controller : public controller_interface::Controller<hardware_int
             jnt_to_jac_solver_->JntToJac(q_, J_);   // Jacobian from joint space
             //J_transpose_ = J_.data.transpose();     // unused
             J_inv_ = J_.data.inverse();             // Jinv
+
+            /*
+            int sum = 0;
+            for (int i=0; i < 6; ++i)
+            {
+                sum += J_inv_(i,i);
+            }
+            if (sum < 0.1)
+            {
+                pseudo_inverse(J_.data, J_inv_, false);
+            }
+            */
 
             //Task space control based on xd
             //ex_temp_.rot = diff(x_.M, xd_.M);
@@ -520,7 +457,7 @@ class reactive_controller : public controller_interface::Controller<hardware_int
             //closed loop inv kinematics with xd_dot
             //qd_.data = qd_old_.data + J_inv_ * (xd_dot_ + K_universal_ * ex_) * dt;
             
-            qd_.data = qd_old_.data + J_inv_ * K_universal_ * ex_ * dt;
+            qd_.data = (qd_old_.data * 0)+ J_inv_ * K_universal_ * ex_ * dt;
             qd_dot_.data = J_inv_ * (xd_dot_ + K_universal_ * ex_);
             qd_ddot_.data = (qd_dot_.data - qd_dot_old_.data) / dt; // qdd = qd d/dt
 
@@ -550,15 +487,16 @@ class reactive_controller : public controller_interface::Controller<hardware_int
         // *** 2.4 Apply Torque Command to Actuator ***
 
         // USE VEL OR FULL CONTROLLER
-        if (control_string == "velocity")
+        if (control_mode == "velocity")
         {
             // use velocity control
-            aux_d_.data = M_.data * (qd_ddot_.data + Kd_use_.data.cwiseProduct(e_dot_.data));
+            aux_d_.data = M_.data * (qd_ddot_.data + Kd_.data.cwiseProduct(e_dot_.data));
         }
         else 
         {
             // default behaviour
-            aux_d_.data = M_.data * (qd_ddot_.data + Kp_use_.data.cwiseProduct(e_.data) + Kd_use_.data.cwiseProduct(e_dot_.data));
+            aux_d_.data = M_.data * (qd_ddot_.data + Kp_.data.cwiseProduct(e_.data) + Kd_.data.cwiseProduct(e_dot_.data));
+
         }
         comp_d_.data = C_.data + G_.data;
         tau_d_.data = aux_d_.data + comp_d_.data;
@@ -788,7 +726,9 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     int t_set;
     char text;
     std::string task_string;
-    std::string control_string;
+    std::string control_mode;
+    std::vector<float> control_params;
+
     bool joint_space;
 
     //Joint handles
@@ -846,7 +786,8 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     KDL::JntArray x_cmd_;
 
     // gains
-    KDL::JntArray Kp_, Ki_, Kd_, Kp_use_, Kd_use_;
+    KDL::JntArray Kp_, Ki_, Kd_;
+
 
     // save the data
     double SaveData_[SaveDataMax];
@@ -854,13 +795,17 @@ class reactive_controller : public controller_interface::Controller<hardware_int
     // ros publisher
     ros::Publisher pub_qd_, pub_q_, pub_e_;
     ros::Publisher pub_SaveData_;
+    ros::Publisher pub_Frame_as_Twist_;
+
 
     // ros message
     std_msgs::Float64MultiArray msg_qd_, msg_q_, msg_e_;
     std_msgs::Float64MultiArray msg_SaveData_;
 
     // ros cmd subscriber
-    ros::Subscriber sub_x_cmd_, sub_key_;
+    ros::Subscriber sub_x_cmd_, sub_parse_command_;
 };
 }; // namespace arm_controllers
+PLUGINLIB_EXPORT_CLASS(arm_controllers::reactive_controller, controller_interface::ControllerBase)
+
 PLUGINLIB_EXPORT_CLASS(arm_controllers::reactive_controller, controller_interface::ControllerBase)
