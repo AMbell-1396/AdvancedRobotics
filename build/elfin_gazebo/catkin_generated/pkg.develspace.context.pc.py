@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "elfin_gazebo"
-PROJECT_SPACE_DIR = "/home/advrob/elfin_ws/devel/.private/elfin_gazebo"
+PROJECT_SPACE_DIR = "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_gazebo"
 PROJECT_VERSION = "0.0.0"

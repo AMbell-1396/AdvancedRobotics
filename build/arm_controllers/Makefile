@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/arm_controllers
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/elfin_ws/build/arm_controllers/CMakeFiles /home/advrob/elfin_ws/build/arm_controllers/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/elfin_ws/build/arm_controllers/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -999,141 +999,6 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-src/adaptive_variable_impedance_controller.o: src/adaptive_variable_impedance_controller.cpp.o
-
-.PHONY : src/adaptive_variable_impedance_controller.o
-
-# target to build an object file
-src/adaptive_variable_impedance_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o
-.PHONY : src/adaptive_variable_impedance_controller.cpp.o
-
-src/adaptive_variable_impedance_controller.i: src/adaptive_variable_impedance_controller.cpp.i
-
-.PHONY : src/adaptive_variable_impedance_controller.i
-
-# target to preprocess a source file
-src/adaptive_variable_impedance_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.i
-.PHONY : src/adaptive_variable_impedance_controller.cpp.i
-
-src/adaptive_variable_impedance_controller.s: src/adaptive_variable_impedance_controller.cpp.s
-
-.PHONY : src/adaptive_variable_impedance_controller.s
-
-# target to generate assembly for a file
-src/adaptive_variable_impedance_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.s
-.PHONY : src/adaptive_variable_impedance_controller.cpp.s
-
-src/computed_torque_clik_controller.o: src/computed_torque_clik_controller.cpp.o
-
-.PHONY : src/computed_torque_clik_controller.o
-
-# target to build an object file
-src/computed_torque_clik_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o
-.PHONY : src/computed_torque_clik_controller.cpp.o
-
-src/computed_torque_clik_controller.i: src/computed_torque_clik_controller.cpp.i
-
-.PHONY : src/computed_torque_clik_controller.i
-
-# target to preprocess a source file
-src/computed_torque_clik_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.i
-.PHONY : src/computed_torque_clik_controller.cpp.i
-
-src/computed_torque_clik_controller.s: src/computed_torque_clik_controller.cpp.s
-
-.PHONY : src/computed_torque_clik_controller.s
-
-# target to generate assembly for a file
-src/computed_torque_clik_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.s
-.PHONY : src/computed_torque_clik_controller.cpp.s
-
-src/computed_torque_controller.o: src/computed_torque_controller.cpp.o
-
-.PHONY : src/computed_torque_controller.o
-
-# target to build an object file
-src/computed_torque_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o
-.PHONY : src/computed_torque_controller.cpp.o
-
-src/computed_torque_controller.i: src/computed_torque_controller.cpp.i
-
-.PHONY : src/computed_torque_controller.i
-
-# target to preprocess a source file
-src/computed_torque_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.i
-.PHONY : src/computed_torque_controller.cpp.i
-
-src/computed_torque_controller.s: src/computed_torque_controller.cpp.s
-
-.PHONY : src/computed_torque_controller.s
-
-# target to generate assembly for a file
-src/computed_torque_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.s
-.PHONY : src/computed_torque_controller.cpp.s
-
-src/gravity_comp_controller.o: src/gravity_comp_controller.cpp.o
-
-.PHONY : src/gravity_comp_controller.o
-
-# target to build an object file
-src/gravity_comp_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o
-.PHONY : src/gravity_comp_controller.cpp.o
-
-src/gravity_comp_controller.i: src/gravity_comp_controller.cpp.i
-
-.PHONY : src/gravity_comp_controller.i
-
-# target to preprocess a source file
-src/gravity_comp_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.i
-.PHONY : src/gravity_comp_controller.cpp.i
-
-src/gravity_comp_controller.s: src/gravity_comp_controller.cpp.s
-
-.PHONY : src/gravity_comp_controller.s
-
-# target to generate assembly for a file
-src/gravity_comp_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.s
-.PHONY : src/gravity_comp_controller.cpp.s
-
-src/passivity_controller.o: src/passivity_controller.cpp.o
-
-.PHONY : src/passivity_controller.o
-
-# target to build an object file
-src/passivity_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o
-.PHONY : src/passivity_controller.cpp.o
-
-src/passivity_controller.i: src/passivity_controller.cpp.i
-
-.PHONY : src/passivity_controller.i
-
-# target to preprocess a source file
-src/passivity_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.i
-.PHONY : src/passivity_controller.cpp.i
-
-src/passivity_controller.s: src/passivity_controller.cpp.s
-
-.PHONY : src/passivity_controller.s
-
-# target to generate assembly for a file
-src/passivity_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.s
-.PHONY : src/passivity_controller.cpp.s
-
 src/reactive_controller.o: src/reactive_controller.cpp.o
 
 .PHONY : src/reactive_controller.o
@@ -1160,60 +1025,6 @@ src/reactive_controller.s: src/reactive_controller.cpp.s
 src/reactive_controller.cpp.s:
 	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.s
 .PHONY : src/reactive_controller.cpp.s
-
-src/time_delay_controller.o: src/time_delay_controller.cpp.o
-
-.PHONY : src/time_delay_controller.o
-
-# target to build an object file
-src/time_delay_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o
-.PHONY : src/time_delay_controller.cpp.o
-
-src/time_delay_controller.i: src/time_delay_controller.cpp.i
-
-.PHONY : src/time_delay_controller.i
-
-# target to preprocess a source file
-src/time_delay_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.i
-.PHONY : src/time_delay_controller.cpp.i
-
-src/time_delay_controller.s: src/time_delay_controller.cpp.s
-
-.PHONY : src/time_delay_controller.s
-
-# target to generate assembly for a file
-src/time_delay_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.s
-.PHONY : src/time_delay_controller.cpp.s
-
-src/velocity_controller.o: src/velocity_controller.cpp.o
-
-.PHONY : src/velocity_controller.o
-
-# target to build an object file
-src/velocity_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o
-.PHONY : src/velocity_controller.cpp.o
-
-src/velocity_controller.i: src/velocity_controller.cpp.i
-
-.PHONY : src/velocity_controller.i
-
-# target to preprocess a source file
-src/velocity_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.i
-.PHONY : src/velocity_controller.cpp.i
-
-src/velocity_controller.s: src/velocity_controller.cpp.s
-
-.PHONY : src/velocity_controller.s
-
-# target to generate assembly for a file
-src/velocity_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/arm_controllers.dir/build.make CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.s
-.PHONY : src/velocity_controller.cpp.s
 
 # Help Target
 help:
@@ -1292,30 +1103,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... src/adaptive_variable_impedance_controller.o"
-	@echo "... src/adaptive_variable_impedance_controller.i"
-	@echo "... src/adaptive_variable_impedance_controller.s"
-	@echo "... src/computed_torque_clik_controller.o"
-	@echo "... src/computed_torque_clik_controller.i"
-	@echo "... src/computed_torque_clik_controller.s"
-	@echo "... src/computed_torque_controller.o"
-	@echo "... src/computed_torque_controller.i"
-	@echo "... src/computed_torque_controller.s"
-	@echo "... src/gravity_comp_controller.o"
-	@echo "... src/gravity_comp_controller.i"
-	@echo "... src/gravity_comp_controller.s"
-	@echo "... src/passivity_controller.o"
-	@echo "... src/passivity_controller.i"
-	@echo "... src/passivity_controller.s"
 	@echo "... src/reactive_controller.o"
 	@echo "... src/reactive_controller.i"
 	@echo "... src/reactive_controller.s"
-	@echo "... src/time_delay_controller.o"
-	@echo "... src/time_delay_controller.i"
-	@echo "... src/time_delay_controller.s"
-	@echo "... src/velocity_controller.o"
-	@echo "... src/velocity_controller.i"
-	@echo "... src/velocity_controller.s"
 .PHONY : help
 
 

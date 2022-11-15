@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_description
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/elfin_description
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/elfin_ws/build/elfin_description/CMakeFiles /home/advrob/elfin_ws/build/elfin_description/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description/CMakeFiles /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/elfin_ws/build/elfin_description/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

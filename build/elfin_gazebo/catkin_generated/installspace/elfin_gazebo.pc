@@ -1,4 +1,4 @@
-prefix=/home/advrob/elfin_ws/install
+prefix=/home/advrob/Desktop/advgi/AdvancedRobotics/install
 
 Name: elfin_gazebo
 Description: Description of elfin_gazebo

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_gazebo
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_gazebo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/elfin_gazebo
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_gazebo
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/advrob/elfin_ws/build/elfin_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_gazebo /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_gazebo /home/advrob/elfin_ws/build/elfin_gazebo /home/advrob/elfin_ws/build/elfin_gazebo /home/advrob/elfin_ws/build/elfin_gazebo/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_gazebo /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_gazebo /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_gazebo /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_gazebo /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_gazebo/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

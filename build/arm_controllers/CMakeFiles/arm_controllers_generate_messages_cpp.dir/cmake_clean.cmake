@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/advrob/elfin_ws/devel/.private/arm_controllers/include/arm_controllers/ControllerJointState.h"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/include/arm_controllers/ControllerJointState.h"
   "CMakeFiles/arm_controllers_generate_messages_cpp"
 )
 

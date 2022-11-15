@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/advrob/elfin_ws/devel/.private/arm_controllers/share/common-lisp/ros/arm_controllers/msg/ControllerJointState.lisp"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/share/common-lisp/ros/arm_controllers/msg/ControllerJointState.lisp"
   "CMakeFiles/arm_controllers_generate_messages_lisp"
 )
 

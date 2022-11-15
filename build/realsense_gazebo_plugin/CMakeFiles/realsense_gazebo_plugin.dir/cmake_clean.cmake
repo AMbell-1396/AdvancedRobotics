@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/advrob/elfin_ws/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.pdb"
-  "/home/advrob/elfin_ws/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.pdb"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so"
   "CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o"
   "CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o"
 )

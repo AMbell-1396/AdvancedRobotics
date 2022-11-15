@@ -1,8 +1,8 @@
-prefix=/home/advrob/elfin_ws/devel/.private/arm_controllers
+prefix=/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers
 
 Name: arm_controllers
 Description: Description of arm_controllers
 Version: 0.0.3
-Cflags: -I/home/advrob/elfin_ws/devel/.private/arm_controllers/include
+Cflags: -I/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/include
 Libs: -L${prefix}/lib -larm_controllers
 Requires: angles controller_interface control_msgs urdf kdl_parser realtime_tools dynamic_reconfigure

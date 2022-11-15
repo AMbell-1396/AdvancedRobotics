@@ -3,11 +3,11 @@
   <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
   
   <!-- Robot Model -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '/home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_description/urdf/elfin3_camera.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '/home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_description/urdf/elfin3_camera.urdf.xacro'" />
       
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model elfin3 -param robot_description"/>
 
-  <rosparam file="/home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_gazebo/config/reactive_controller.yaml" command="load"/>
+  <rosparam file="/home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_gazebo/config/reactive_controller.yaml" command="load"/>
 
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
       output="screen" ns="/elfin" args="joint_state_controller reactive_controller"/>

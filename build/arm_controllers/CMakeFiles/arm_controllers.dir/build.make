@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/arm_controllers
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers
 
 # Include any dependencies generated for this target.
 include CMakeFiles/arm_controllers.dir/depend.make
@@ -57,175 +57,70 @@ include CMakeFiles/arm_controllers.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/arm_controllers.dir/flags.make
 
-CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/time_delay_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/time_delay_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/time_delay_controller.cpp > CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/time_delay_controller.cpp -o CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.s
-
-CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/gravity_comp_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/gravity_comp_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/gravity_comp_controller.cpp > CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/gravity_comp_controller.cpp -o CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.s
-
-CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_controller.cpp > CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_controller.cpp -o CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.s
-
-CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_clik_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_clik_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_clik_controller.cpp > CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/computed_torque_clik_controller.cpp -o CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.s
-
-CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/adaptive_variable_impedance_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/adaptive_variable_impedance_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/adaptive_variable_impedance_controller.cpp > CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/adaptive_variable_impedance_controller.cpp -o CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.s
-
-CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/passivity_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/passivity_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/passivity_controller.cpp > CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/passivity_controller.cpp -o CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.s
-
-CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp
-
-CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp > CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.i
-
-CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/velocity_controller.cpp -o CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.s
-
 CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o: CMakeFiles/arm_controllers.dir/flags.make
-CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o: /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o -c /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp
+CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o: /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o -c /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp
 
 CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp > CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp > CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.i
 
 CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp -o CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp -o CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.s
 
 # Object files for target arm_controllers
 arm_controllers_OBJECTS = \
-"CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o" \
-"CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o" \
-"CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o" \
-"CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o" \
-"CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o" \
-"CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o" \
-"CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o" \
 "CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o"
 
 # External object files for target arm_controllers
 arm_controllers_EXTERNAL_OBJECTS =
 
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/time_delay_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/gravity_comp_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/computed_torque_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/computed_torque_clik_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/adaptive_variable_impedance_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/passivity_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/velocity_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/build.make
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libkdl_parser.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/liborocos-kdl.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/liburdf.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_model.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_world.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libclass_loader.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libPocoFoundation.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libdl.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libroslib.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librospack.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole_bridge.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librealtime_tools.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libroscpp.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librostime.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libcpp_common.so
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/advrob/elfin_ws/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library /home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so"
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/build.make
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libkdl_parser.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/liborocos-kdl.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/liburdf.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_model.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liburdfdom_world.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libclass_loader.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libPocoFoundation.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libroslib.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librospack.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole_bridge.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librealtime_tools.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libroscpp.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/librostime.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /opt/ros/noetic/lib/libcpp_common.so
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so: CMakeFiles/arm_controllers.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/arm_controllers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/arm_controllers.dir/build: /home/advrob/elfin_ws/devel/.private/arm_controllers/lib/libarm_controllers.so
+CMakeFiles/arm_controllers.dir/build: /home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/libarm_controllers.so
 
 .PHONY : CMakeFiles/arm_controllers.dir/build
 
@@ -234,6 +129,6 @@ CMakeFiles/arm_controllers.dir/clean:
 .PHONY : CMakeFiles/arm_controllers.dir/clean
 
 CMakeFiles/arm_controllers.dir/depend:
-	cd /home/advrob/elfin_ws/build/arm_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers /home/advrob/elfin_ws/build/arm_controllers /home/advrob/elfin_ws/build/arm_controllers /home/advrob/elfin_ws/build/arm_controllers/CMakeFiles/arm_controllers.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles/arm_controllers.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/arm_controllers.dir/depend
 

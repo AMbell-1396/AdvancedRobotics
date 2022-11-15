@@ -7,7 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/advrob/elfin_ws/devel/.private/realsense_gazebo_plugin:$CMAKE_PREFIX_PATH"
-export PWD='/home/advrob/elfin_ws/build/realsense_gazebo_plugin'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/advrob/elfin_ws/devel/.private/realsense_gazebo_plugin/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/advrob/elfin_ws/src/realsense_gazebo_plugin:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/advrob/Desktop/advgi/AdvancedRobotics/build/realsense_gazebo_plugin'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/advrob/elfin_ws/src/realsense_gazebo_plugin:/home/advrob/Desktop/advgi/AdvancedRobotics/src/realsense_gazebo_plugin:$ROS_PACKAGE_PATH"

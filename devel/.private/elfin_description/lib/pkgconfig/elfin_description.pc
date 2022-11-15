@@ -1,4 +1,4 @@
-prefix=/home/advrob/elfin_ws/devel/.private/elfin_description
+prefix=/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_description
 
 Name: elfin_description
 Description: Description of elfin_description

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_description
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/elfin_description
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description
 
 # Utility rule file for roscpp_generate_messages_nodejs.
 
@@ -67,6 +67,6 @@ CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
 .PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 CMakeFiles/roscpp_generate_messages_nodejs.dir/depend:
-	cd /home/advrob/elfin_ws/build/elfin_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_description /home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_description /home/advrob/elfin_ws/build/elfin_description /home/advrob/elfin_ws/build/elfin_description /home/advrob/elfin_ws/build/elfin_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_description /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_description /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description /home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 

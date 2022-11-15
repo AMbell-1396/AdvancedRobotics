@@ -1,4 +1,0 @@
-make[2]: *** [msg/CMakeFiles/uorb_headers.dir/build.make:328: uORB/topics/uORBTopics.hpp] Error 1
-make[1]: *** [CMakeFiles/Makefile2:6086: msg/CMakeFiles/uorb_headers.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-make: *** [Makefile:163: all] Error 2

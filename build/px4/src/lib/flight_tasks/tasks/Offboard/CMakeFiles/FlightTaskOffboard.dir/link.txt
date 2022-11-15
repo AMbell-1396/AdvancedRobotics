@@ -1,2 +1,0 @@
-/usr/bin/ar qc /home/advrob/elfin_ws/devel/.private/px4/lib/libFlightTaskOffboard.a  CMakeFiles/FlightTaskOffboard.dir/FlightTaskOffboard.cpp.o
-/usr/bin/ranlib /home/advrob/elfin_ws/devel/.private/px4/lib/libFlightTaskOffboard.a

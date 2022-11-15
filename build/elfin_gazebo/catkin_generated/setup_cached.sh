@@ -7,7 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/advrob/elfin_ws/devel/.private/elfin_gazebo:$CMAKE_PREFIX_PATH"
-export PWD='/home/advrob/elfin_ws/build/elfin_gazebo'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/advrob/elfin_ws/devel/.private/elfin_gazebo/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_gazebo:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_gazebo:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_gazebo/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_gazebo/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/advrob/Desktop/advgi/AdvancedRobotics/build/elfin_gazebo'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_gazebo/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/advrob/elfin_ws/src/edu-elfin_simulation/elfin/elfin_gazebo:/home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/elfin/elfin_gazebo:$ROS_PACKAGE_PATH"

@@ -1,4 +1,4 @@
-prefix=/home/advrob/elfin_ws/devel/.private/realsense_gazebo_plugin
+prefix=/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/realsense_gazebo_plugin
 
 Name: realsense_gazebo_plugin
 Description: Description of realsense_gazebo_plugin

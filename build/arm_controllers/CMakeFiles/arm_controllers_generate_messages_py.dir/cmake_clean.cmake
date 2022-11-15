@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/python3/dist-packages/arm_controllers/msg/_ControllerJointState.py"
-  "/home/advrob/elfin_ws/devel/.private/arm_controllers/lib/python3/dist-packages/arm_controllers/msg/__init__.py"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/python3/dist-packages/arm_controllers/msg/_ControllerJointState.py"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/lib/python3/dist-packages/arm_controllers/msg/__init__.py"
   "CMakeFiles/arm_controllers_generate_messages_py"
 )
 

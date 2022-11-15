@@ -1,6 +1,6 @@
-devel_space: /home/advrob/elfin_ws/devel
+devel_space: /home/advrob/Desktop/advgi/AdvancedRobotics/devel
 install: false
-install_space: /home/advrob/elfin_ws/install
+install_space: /home/advrob/Desktop/advgi/AdvancedRobotics/install
 profile: default
-source_space: /home/advrob/elfin_ws/src
-workspace: /home/advrob/elfin_ws
+source_space: /home/advrob/Desktop/advgi/AdvancedRobotics/src
+workspace: /home/advrob/Desktop/advgi/AdvancedRobotics

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/arm_controllers
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers
 
 # Utility rule file for arm_controllers_gennodejs.
 
@@ -67,6 +67,6 @@ CMakeFiles/arm_controllers_gennodejs.dir/clean:
 .PHONY : CMakeFiles/arm_controllers_gennodejs.dir/clean
 
 CMakeFiles/arm_controllers_gennodejs.dir/depend:
-	cd /home/advrob/elfin_ws/build/arm_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers /home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers /home/advrob/elfin_ws/build/arm_controllers /home/advrob/elfin_ws/build/arm_controllers /home/advrob/elfin_ws/build/arm_controllers/CMakeFiles/arm_controllers_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/CMakeFiles/arm_controllers_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/arm_controllers_gennodejs.dir/depend
 

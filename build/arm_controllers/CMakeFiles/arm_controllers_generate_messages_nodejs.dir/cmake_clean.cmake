@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/advrob/elfin_ws/devel/.private/arm_controllers/share/gennodejs/ros/arm_controllers/msg/ControllerJointState.js"
+  "/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/arm_controllers/share/gennodejs/ros/arm_controllers/msg/ControllerJointState.js"
   "CMakeFiles/arm_controllers_generate_messages_nodejs"
 )
 

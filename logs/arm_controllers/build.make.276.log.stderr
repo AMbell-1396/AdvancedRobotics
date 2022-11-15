@@ -1,8 +1,0 @@
-[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvirtual void arm_controllers::reactive_controller::update(const ros::Time&, const ros::Duration&)[m[K’:
-[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:434:13:[m[K [01;31m[Kerror: [m[K‘[01m[KJ_inv_[m[K’ was not declared in this scope; did you mean ‘[01m[Ke_int_[m[K’?
-  434 |             [01;31m[KJ_inv_[m[K = J_.data.inverse();             // Jinv
-      |             [01;31m[K^~~~~~[m[K
-      |             [32m[Ke_int_[m[K
-make[2]: *** [CMakeFiles/arm_controllers.dir/build.make:154: CMakeFiles/arm_controllers.dir/src/reactive_controller.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:385: CMakeFiles/arm_controllers.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

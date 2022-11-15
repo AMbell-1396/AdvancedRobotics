@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/include/utils/pseudo_inversion.h
+/home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/include/utils/pseudo_inversion.h
 Eigen/Core
 -
 Eigen/LU
@@ -14,13 +14,13 @@ Eigen/LU
 Eigen/SVD
 -
 
-/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/include/utils/skew_symmetric.h
+/home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/include/utils/skew_symmetric.h
 kdl/kdl.hpp
 -
 Eigen/Core
 -
 
-/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp
+/home/advrob/Desktop/advgi/AdvancedRobotics/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp
 controller_interface/controller.h
 -
 hardware_interface/joint_command_interface.h
@@ -30,6 +30,8 @@ pluginlib/class_list_macros.h
 std_msgs/Float64MultiArray.h
 -
 std_msgs/String.h
+-
+geometry_msgs/Twist.h
 -
 urdf/model.h
 -
@@ -164,6 +166,42 @@ ros/node_handle.h
 hardware_interface/robot_hw.h
 -
 memory
+-
+
+/opt/ros/noetic/include/geometry_msgs/Twist.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Vector3.h
+-
+geometry_msgs/Vector3.h
+-
+
+/opt/ros/noetic/include/geometry_msgs/Vector3.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/noetic/include/hardware_interface/controller_info.h
@@ -955,7 +993,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -973,7 +1011,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -989,7 +1027,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -

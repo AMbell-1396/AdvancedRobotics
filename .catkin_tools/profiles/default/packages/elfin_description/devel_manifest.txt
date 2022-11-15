@@ -1,5 +1,5 @@
 edu-elfin_simulation/elfin/elfin_description
-/home/advrob/elfin_ws/devel/.private/elfin_description/cmake.lock /home/advrob/elfin_ws/devel/./cmake.lock
-/home/advrob/elfin_ws/devel/.private/elfin_description/lib/pkgconfig/elfin_description.pc /home/advrob/elfin_ws/devel/lib/pkgconfig/elfin_description.pc
-/home/advrob/elfin_ws/devel/.private/elfin_description/share/elfin_description/cmake/elfin_descriptionConfig-version.cmake /home/advrob/elfin_ws/devel/share/elfin_description/cmake/elfin_descriptionConfig-version.cmake
-/home/advrob/elfin_ws/devel/.private/elfin_description/share/elfin_description/cmake/elfin_descriptionConfig.cmake /home/advrob/elfin_ws/devel/share/elfin_description/cmake/elfin_descriptionConfig.cmake
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_description/cmake.lock /home/advrob/Desktop/advgi/AdvancedRobotics/devel/./cmake.lock
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_description/lib/pkgconfig/elfin_description.pc /home/advrob/Desktop/advgi/AdvancedRobotics/devel/lib/pkgconfig/elfin_description.pc
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_description/share/elfin_description/cmake/elfin_descriptionConfig-version.cmake /home/advrob/Desktop/advgi/AdvancedRobotics/devel/share/elfin_description/cmake/elfin_descriptionConfig-version.cmake
+/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_description/share/elfin_description/cmake/elfin_descriptionConfig.cmake /home/advrob/Desktop/advgi/AdvancedRobotics/devel/share/elfin_description/cmake/elfin_descriptionConfig.cmake

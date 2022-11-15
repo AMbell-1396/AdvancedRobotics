@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest
-# Build directory: /home/advrob/elfin_ws/build/arm_controllers/gtest
+# Build directory: /home/advrob/Desktop/advgi/AdvancedRobotics/build/arm_controllers/gtest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

@@ -1,4 +1,4 @@
-prefix=/home/advrob/elfin_ws/devel/.private/elfin_gazebo
+prefix=/home/advrob/Desktop/advgi/AdvancedRobotics/devel/.private/elfin_gazebo
 
 Name: elfin_gazebo
 Description: Description of elfin_gazebo

@@ -1,4 +1,0 @@
-[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:[m[K In member function ‘[01m[Kvoid arm_controllers::reactive_controller::keyCmd(const ConstPtr&)[m[K’:
-[01m[K/home/advrob/elfin_ws/src/edu-elfin_simulation/arm_controllers/src/reactive_controller.cpp:263:33:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
-  263 |         printf(msg->data.c_str()[01;35m[K)[m[K;
-      |                                 [01;35m[K^[m[K

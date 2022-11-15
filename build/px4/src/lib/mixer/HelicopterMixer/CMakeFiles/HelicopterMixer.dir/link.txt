@@ -1,2 +1,0 @@
-/usr/bin/ar qc /home/advrob/elfin_ws/devel/.private/px4/lib/libHelicopterMixer.a  CMakeFiles/HelicopterMixer.dir/HelicopterMixer.cpp.o
-/usr/bin/ranlib /home/advrob/elfin_ws/devel/.private/px4/lib/libHelicopterMixer.a

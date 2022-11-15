@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/advrob/elfin_ws/src/realsense_gazebo_plugin
+CMAKE_SOURCE_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/src/realsense_gazebo_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/advrob/elfin_ws/build/realsense_gazebo_plugin
+CMAKE_BINARY_DIR = /home/advrob/Desktop/advgi/AdvancedRobotics/build/realsense_gazebo_plugin
 
 # Utility rule file for rosgraph_msgs_generate_messages_eus.
 
@@ -67,6 +67,6 @@ CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend:
-	cd /home/advrob/elfin_ws/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/elfin_ws/src/realsense_gazebo_plugin /home/advrob/elfin_ws/src/realsense_gazebo_plugin /home/advrob/elfin_ws/build/realsense_gazebo_plugin /home/advrob/elfin_ws/build/realsense_gazebo_plugin /home/advrob/elfin_ws/build/realsense_gazebo_plugin/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/advrob/Desktop/advgi/AdvancedRobotics/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/advrob/Desktop/advgi/AdvancedRobotics/src/realsense_gazebo_plugin /home/advrob/Desktop/advgi/AdvancedRobotics/src/realsense_gazebo_plugin /home/advrob/Desktop/advgi/AdvancedRobotics/build/realsense_gazebo_plugin /home/advrob/Desktop/advgi/AdvancedRobotics/build/realsense_gazebo_plugin /home/advrob/Desktop/advgi/AdvancedRobotics/build/realsense_gazebo_plugin/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
 

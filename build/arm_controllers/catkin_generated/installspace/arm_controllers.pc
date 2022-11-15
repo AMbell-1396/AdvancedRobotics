@@ -1,4 +1,4 @@
-prefix=/home/advrob/elfin_ws/install
+prefix=/home/advrob/Desktop/advgi/AdvancedRobotics/install
 
 Name: arm_controllers
 Description: Description of arm_controllers
